@@ -19,19 +19,31 @@ export default function ContactPage() {
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="text-sm text-craftmark-muted">
-            <p className="font-semibold text-craftmark-text">Visit</p>
-            <p className="mt-2">{fullAddress()}</p>
-            <p className="mt-2">
-              <a href={directionsUrl()} target="_blank" rel="noreferrer" className="hover:underline">
-                Get Directions
-              </a>
-            </p>
-            <p className="mt-2">
-              Phone: <a href={`tel:${SITE.phone.replace(/\D/g, "")}`}>{SITE.phone}</a>
-            </p>
-            <p className="mt-2">
-              Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
-            </p>
+            <div className="overflow-hidden rounded-lg border border-craftmark-line">
+              <iframe
+                title="Craftmark location map"
+                src={`https://www.google.com/maps?q=${encodeURIComponent(fullAddress())}&output=embed`}
+                className="h-64 w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            <div className="mt-6">
+              <p className="font-semibold text-craftmark-text">Visit</p>
+              <p className="mt-2">{fullAddress()}</p>
+              <p className="mt-2">
+                <a href={directionsUrl()} target="_blank" rel="noreferrer" className="hover:underline">
+                  Get Directions
+                </a>
+              </p>
+              <p className="mt-2">
+                Phone: <a href={`tel:${SITE.phone.replace(/\D/g, "")}`}>{SITE.phone}</a>
+              </p>
+              <p className="mt-2">
+                Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+              </p>
+            </div>
           </div>
           <Suspense fallback={<p className="text-sm text-craftmark-muted">Loading form…</p>}>
             <ContactForm />
