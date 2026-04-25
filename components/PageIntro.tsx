@@ -10,8 +10,8 @@ export function PageIntro({
   children?: ReactNode;
 }) {
   return (
-    <section className="border-b border-craftmark-line bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+    <section className="border-b-2 border-craftmark-line bg-craftmark-surface">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         {eyebrow ? (
           <p className="text-sm font-semibold uppercase tracking-wide text-craftmark-navy">
             {eyebrow}

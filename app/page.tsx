@@ -15,56 +15,76 @@ export default function HomePage() {
     <>
       <JsonLd data={faqPageJsonLd()} />
       <section className="border-b border-craftmark-line bg-craftmark-surface">
-        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
-          <div className="relative overflow-hidden rounded-2xl border border-craftmark-line">
+        <div className="relative isolate overflow-hidden">
+          {/* Blurred backdrop for the top banner only */}
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-full">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={projects[0]?.image ?? "/images/colors/placeholder.svg"}
+              src={
+                projects[2]?.image ??
+                projects[3]?.image ??
+                projects[0]?.image ??
+                "/images/colors/placeholder.svg"
+              }
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full scale-110 object-cover opacity-40 blur-[2px]"
+            />
+          </div>
+          <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">
+            <div className="max-w-3xl rounded-xl bg-white/75 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+              <p className="text-sm font-semibold uppercase tracking-wide text-craftmark-navy">
+                {SITE.tagline}
+              </p>
+              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-craftmark-text sm:text-5xl">
+                The countertops the pros use — now open to homeowners.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg text-craftmark-muted">
+                Craftmark serves homeowners, builders, commercial contractors, and large projects. We work
+                on projects of any size—from a single kitchen refresh to multi-unit developments—with the
+                same professional standards.
+              </p>
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Link
+                  href="/homeowners"
+                  className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-6 py-3 text-sm font-semibold text-white hover:bg-craftmark-navyLight"
+                >
+                  For Homeowners
+                </Link>
+                <Link
+                  href="/builders"
+                  className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-6 py-3 text-sm font-semibold text-white hover:bg-craftmark-navyLight"
+                >
+                  For Builders
+                </Link>
+                <Link
+                  href="/commercial"
+                  className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-6 py-3 text-sm font-semibold text-white hover:bg-craftmark-navyLight"
+                >
+                  For Commercial Contractors
+                </Link>
+              </div>
+              <p className="mt-10 text-sm font-medium text-craftmark-text">
+                Trusted since {SITE.foundingDate} · Custom-built · Projects of any size
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-craftmark-line bg-craftmark-surface">
+        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
+          <div className="overflow-hidden rounded-2xl border border-craftmark-line">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={projects[1]?.image ?? projects[0]?.image ?? "/images/colors/placeholder.svg"}
               alt="Craftmark kitchen hero"
               className="h-[24rem] w-full object-cover sm:h-[32rem] lg:h-[40rem]"
             />
-            <div className="absolute inset-0 bg-black/35" />
-            <div className="absolute inset-0 flex items-center">
-              <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
-                <div className="max-w-3xl rounded-xl bg-white/88 p-6 shadow-md backdrop-blur-sm sm:p-8">
-                  <p className="text-sm font-semibold uppercase tracking-wide text-craftmark-navy">
-                    {SITE.tagline}
-                  </p>
-                  <h1 className="mt-4 text-4xl font-semibold tracking-tight text-craftmark-text sm:text-5xl">
-                    The countertops the pros use — now open to homeowners.
-                  </h1>
-                  <p className="mt-6 max-w-2xl text-lg text-craftmark-muted">
-                    Craftmark serves homeowners, builders, commercial contractors, and large
-                    projects. We work on projects of any size—from a single kitchen refresh to
-                    multi-unit developments—with the same professional standards.
-                  </p>
-                  <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                    <Link
-                      href="/homeowners"
-                      className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-6 py-3 text-sm font-semibold text-white hover:bg-craftmark-navyLight"
-                    >
-                      For Homeowners
-                    </Link>
-                    <Link
-                      href="/builders"
-                      className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-6 py-3 text-sm font-semibold text-white hover:bg-craftmark-navyLight"
-                    >
-                      For Builders
-                    </Link>
-                    <Link
-                      href="/commercial"
-                      className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-6 py-3 text-sm font-semibold text-white hover:bg-craftmark-navyLight"
-                    >
-                      For Commercial Contractors
-                    </Link>
-                  </div>
-                  <p className="mt-10 text-sm font-medium text-craftmark-text">
-                    Trusted since {SITE.foundingDate} · Custom-built · Projects of any size
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
+          <p className="mt-4 text-center text-lg font-bold tracking-tight text-craftmark-navy sm:mt-5 sm:text-2xl">
+            Where Vision Meets Stone - Crafted to Impress.
+          </p>
         </div>
       </section>
 
