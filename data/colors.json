@@ -1,0 +1,515 @@
+[
+  {
+    "id": "solid-designer-white",
+    "material": "Solid Surface",
+    "colorName": "Designer White",
+    "thicknessOptions": ["1/2\""],
+    "finish": "Matte",
+    "tags": ["white", "clean"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "marble-carrara",
+    "material": "Marble",
+    "colorName": "Carrara",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "veining", "classic"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "marble-calacatta-gold",
+    "material": "Marble",
+    "colorName": "Calacatta Gold",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gold", "veining", "dramatic"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "marble-statuario",
+    "material": "Marble",
+    "colorName": "Statuario",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "veining", "bold"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "marble-nero-marquina",
+    "material": "Marble",
+    "colorName": "Nero Marquina",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["dark", "black", "white", "veining"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "marble-honed-classic",
+    "material": "Marble",
+    "colorName": "Classic White Honed",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Honed",
+    "tags": ["white", "natural", "classic", "soft"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "marble-emperador-light",
+    "material": "Marble",
+    "colorName": "Emperador Light",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["beige", "brown", "warm"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "marble-crema-marfil",
+    "material": "Marble",
+    "colorName": "Crema Marfil",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["beige", "cream", "warm"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "marble-tundra-gray",
+    "material": "Marble",
+    "colorName": "Tundra Gray",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["gray", "cool", "subtle"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "quartzite-taj-mahal",
+    "material": "Quartzite",
+    "colorName": "Taj Mahal",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["cream", "warm", "movement", "natural"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "quartzite-white-macaubas",
+    "material": "Quartzite",
+    "colorName": "White Macaubas",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "linear", "natural"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "quartzite-sea-pearl",
+    "material": "Quartzite",
+    "colorName": "Sea Pearl",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["gray", "green", "movement", "natural"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "quartzite-fantasy-brown",
+    "material": "Quartzite",
+    "colorName": "Fantasy Brown",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["brown", "gray", "movement", "natural"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "quartzite-blue-montana",
+    "material": "Quartzite",
+    "colorName": "Blue Montana",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Leather",
+    "tags": ["blue", "gray", "texture", "natural"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "quartzite-patagonia",
+    "material": "Quartzite",
+    "colorName": "Patagonia",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gold", "dramatic", "natural"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "quartzite-mont-blanc",
+    "material": "Quartzite",
+    "colorName": "Mont Blanc",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "veining", "natural"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "quartzite-crystaline",
+    "material": "Quartzite",
+    "colorName": "Crystalline",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "sparkle", "cool", "natural"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "msi-calacatta-laza",
+    "material": "Quartz",
+    "brand": "MSI",
+    "colorName": "Calacatta Laza",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "veining", "calacatta-look"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "msi-carrara-miksa",
+    "material": "Quartz",
+    "brand": "MSI",
+    "colorName": "Carrara Miksa",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "subtle", "carrara-look"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "msi-arctic-white",
+    "material": "Quartz",
+    "brand": "MSI",
+    "colorName": "Arctic White",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "clean", "minimal"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "msi-smoked-pearl",
+    "material": "Quartz",
+    "brand": "MSI",
+    "colorName": "Smoked Pearl",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["gray", "brown", "warm", "movement"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "msi-calacatta-ivory",
+    "material": "Quartz",
+    "brand": "MSI",
+    "colorName": "Calacatta Ivory",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "warm", "veining"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "msi-cashmere-carrara",
+    "material": "Quartz",
+    "brand": "MSI",
+    "colorName": "Cashmere Carrara",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "soft"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "cambria-brittanicca",
+    "material": "Quartz",
+    "brand": "Cambria",
+    "colorName": "Brittanicca",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "veining", "dramatic"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "cambria-berwyn",
+    "material": "Quartz",
+    "brand": "Cambria",
+    "colorName": "Berwyn",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["gray", "brown", "movement", "warm"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "cambria-torquay",
+    "material": "Quartz",
+    "brand": "Cambria",
+    "colorName": "Torquay",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "marble-look"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "cambria-windermere",
+    "material": "Quartz",
+    "brand": "Cambria",
+    "colorName": "Windermere",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "warm", "subtle"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "cambria-clareanne",
+    "material": "Quartz",
+    "brand": "Cambria",
+    "colorName": "Clareanne",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gold", "veining"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "cambria-ella",
+    "material": "Quartz",
+    "brand": "Cambria",
+    "colorName": "Ella",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "clean", "soft"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "daltile-marble-attache",
+    "material": "Quartz",
+    "brand": "Daltile",
+    "colorName": "Marble Attache",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "marble-look"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "daltile-statuario-one",
+    "material": "Quartz",
+    "brand": "Daltile",
+    "colorName": "Statuario ONE",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "bold", "veining"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "daltile-calacatta-one",
+    "material": "Quartz",
+    "brand": "Daltile",
+    "colorName": "Calacatta ONE",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gold", "calacatta-look"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "daltile-agate-avorio",
+    "material": "Quartz",
+    "brand": "Daltile",
+    "colorName": "Agate Avorio",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["cream", "beige", "warm"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "daltile-crete-look",
+    "material": "Quartz",
+    "brand": "Daltile",
+    "colorName": "Concrete Look Gray",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Matte",
+    "tags": ["gray", "modern", "industrial"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "daltile-urban-slate",
+    "material": "Quartz",
+    "brand": "Daltile",
+    "colorName": "Urban Slate",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["gray", "dark", "cool"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "hanstone-aspen",
+    "material": "Quartz",
+    "brand": "HanStone",
+    "colorName": "Aspen",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "subtle"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "hanstone-montauk",
+    "material": "Quartz",
+    "brand": "HanStone",
+    "colorName": "Montauk",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["gray", "movement", "cool"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "hanstone-tranquility",
+    "material": "Quartz",
+    "brand": "HanStone",
+    "colorName": "Tranquility",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "clean", "minimal"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "hanstone-silver-lake",
+    "material": "Quartz",
+    "brand": "HanStone",
+    "colorName": "Silver Lake",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["gray", "sparkle", "cool"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "hanstone-antico-cloud",
+    "material": "Quartz",
+    "brand": "HanStone",
+    "colorName": "Antico Cloud",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "warm", "veining"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "hanstone-onyx-black",
+    "material": "Quartz",
+    "brand": "HanStone",
+    "colorName": "Onyx Black",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["dark", "black", "modern"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "corian-quartz-ash-concrete",
+    "material": "Quartz",
+    "brand": "Corian",
+    "colorName": "Ash Concrete",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Matte",
+    "tags": ["gray", "concrete-look", "modern"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "corian-quartz-white-onyx",
+    "material": "Quartz",
+    "brand": "Corian",
+    "colorName": "White Onyx",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "soft", "minimal"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "corian-quartz-graylite",
+    "material": "Quartz",
+    "brand": "Corian",
+    "colorName": "Graylite",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["gray", "neutral"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "corian-quartz-avalanche",
+    "material": "Quartz",
+    "brand": "Corian",
+    "colorName": "Avalanche",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "movement"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "corian-quartz-noble-grey",
+    "material": "Quartz",
+    "brand": "Corian",
+    "colorName": "Noble Grey",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["gray", "cool", "veining"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "corian-quartz-limestone",
+    "material": "Quartz",
+    "brand": "Corian",
+    "colorName": "Limestone Prima",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Matte",
+    "tags": ["beige", "warm", "soft"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "silestone-eternal-calacatta-gold",
+    "material": "Quartz",
+    "brand": "Silestone",
+    "colorName": "Eternal Calacatta Gold",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gold", "veining", "calacatta-look"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "silestone-miami-white",
+    "material": "Quartz",
+    "brand": "Silestone",
+    "colorName": "Miami White",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "clean", "bright"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "silestone-charcoal-soapstone",
+    "material": "Quartz",
+    "brand": "Silestone",
+    "colorName": "Charcoal Soapstone",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Suede",
+    "tags": ["dark", "gray", "soapstone-look"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "silestone-lyra",
+    "material": "Quartz",
+    "brand": "Silestone",
+    "colorName": "Lyra",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "sparkle"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "silestone-iconic-white",
+    "material": "Quartz",
+    "brand": "Silestone",
+    "colorName": "Iconic White",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["white", "minimal"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "silestone-coral-clay",
+    "material": "Quartz",
+    "brand": "Silestone",
+    "colorName": "Coral Clay",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Suede",
+    "tags": ["terracotta", "warm", "earth"],
+    "image": "/images/colors/placeholder.svg"
+  }
+]

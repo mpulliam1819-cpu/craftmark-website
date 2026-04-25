@@ -1,0 +1,38 @@
+[
+  {
+    "remnantId": "R-1001",
+    "material": "Quartz",
+    "colorName": "Sterling White",
+    "thickness": "3cm",
+    "finish": "Polished",
+    "size": "42\" x 96\"",
+    "location": "Yard A",
+    "status": "Available",
+    "lastUpdated": "2026-04-01",
+    "photoUrl": "/images/colors/placeholder.svg"
+  },
+  {
+    "remnantId": "R-1002",
+    "material": "Quartz",
+    "colorName": "Coastal Gray",
+    "thickness": "2cm",
+    "finish": "Polished",
+    "size": "36\" x 120\"",
+    "location": "Yard B",
+    "status": "Available",
+    "lastUpdated": "2026-04-10",
+    "photoUrl": "/images/colors/placeholder.svg"
+  },
+  {
+    "remnantId": "R-1003",
+    "material": "Natural Stone",
+    "colorName": "Classic Marble Honed",
+    "thickness": "2cm",
+    "finish": "Honed",
+    "size": "28\" x 72\"",
+    "location": "Yard A",
+    "status": "Hold",
+    "lastUpdated": "2026-04-18",
+    "photoUrl": "/images/colors/placeholder.svg"
+  }
+]

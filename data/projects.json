@@ -1,0 +1,98 @@
+[
+  {
+    "id": "brookmont-kitchen-1",
+    "projectName": "Brookmont Kitchen",
+    "category": "Kitchen",
+    "caption": "Bright kitchen install with polished edge profile.",
+    "image": "/images/projects/Brookmont-Chafin-Communities-Kitchen.jpg",
+    "completedAt": "2026-01"
+  },
+  {
+    "id": "brookmont-kitchen-2",
+    "projectName": "Brookmont Kitchen",
+    "category": "Kitchen",
+    "caption": "Matching perimeter and island surfaces with clean seams.",
+    "image": "/images/projects/Brookmont-Chafin-Communities-Kitchen-2.jpg",
+    "completedAt": "2026-01"
+  },
+  {
+    "id": "brookmont-bath-1",
+    "projectName": "Brookmont Primary Bath",
+    "category": "Bath",
+    "caption": "Dual vanity tops with coordinated backsplash detail.",
+    "image": "/images/projects/Brookmont-Chafin-Communities-Primary-Bath-4.jpg",
+    "completedAt": "2026-02"
+  },
+  {
+    "id": "brookmont-bath-2",
+    "projectName": "Brookmont Primary Bath",
+    "category": "Bath",
+    "caption": "Polished finish with balanced veining at sink cutouts.",
+    "image": "/images/projects/Brookmont-Chafin-Communities-Primary-Bath-5.jpg",
+    "completedAt": "2026-02"
+  },
+  {
+    "id": "chimney-outdoor-1",
+    "projectName": "Chimney Oaks Outdoor",
+    "category": "Outdoor",
+    "caption": "Outdoor prep and entertainment surface package.",
+    "image": "/images/projects/Chimney Oaks - 4.jpg",
+    "completedAt": "2025-11"
+  },
+  {
+    "id": "chimney-outdoor-2",
+    "projectName": "Chimney Oaks Outdoor",
+    "category": "Outdoor",
+    "caption": "Extended countertop run with weather-friendly material selection.",
+    "image": "/images/projects/Chimney Oaks - 5.jpg",
+    "completedAt": "2025-11"
+  },
+  {
+    "id": "oxford-custom-1",
+    "projectName": "Oxford Custom Home",
+    "category": "Custom Home",
+    "caption": "Kitchen focal slab aligned to cabinetry symmetry.",
+    "image": "/images/projects/Oxford-Chafin-Communities-Kitchen-4.jpg",
+    "completedAt": "2025-10"
+  },
+  {
+    "id": "oxford-custom-2",
+    "projectName": "Oxford Custom Home",
+    "category": "Custom Home",
+    "caption": "Primary bath vanity set with matching threshold details.",
+    "image": "/images/projects/Oxford-Chafin-Communities-Primary-Bath.jpg",
+    "completedAt": "2025-10"
+  },
+  {
+    "id": "camelot-commercial-1",
+    "projectName": "Camelot Install Program",
+    "category": "Commercial",
+    "caption": "High-throughput install layout for repeatable timelines.",
+    "image": "/images/projects/Camelot-Chafin-Communities-Kitchen-3.jpg",
+    "completedAt": "2025-12"
+  },
+  {
+    "id": "camelot-commercial-2",
+    "projectName": "Camelot Install Program",
+    "category": "Commercial",
+    "caption": "Coordinated field installation with consistent edge execution.",
+    "image": "/images/projects/Camelot-Chafin-Communities-Kitchen-4.jpg",
+    "completedAt": "2025-12"
+  },
+  {
+    "id": "chestnut-multifamily-1",
+    "projectName": "Chestnut Multifamily",
+    "category": "Multifamily",
+    "caption": "Unit turnover package with repeatable templates.",
+    "image": "/images/projects/Chestnut-Chafin-Communities-Kitchen-3.jpg",
+    "completedAt": "2025-09"
+  },
+  {
+    "id": "chestnut-multifamily-2",
+    "projectName": "Chestnut Multifamily",
+    "category": "Multifamily",
+    "caption": "Common-area continuity across phased installations.",
+    "image": "/images/projects/Chestnut-Chafin-Communities-Kitchen-4.jpg",
+    "completedAt": "2025-09"
+  }
+]
