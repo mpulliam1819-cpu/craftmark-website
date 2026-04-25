@@ -22,43 +22,10 @@ export function ProjectImageStrip({
   ctaHref = "/projects",
   ctaLabel = "View all projects",
 }: ProjectImageStripProps) {
-  // #region agent log
-  fetch("http://127.0.0.1:7908/ingest/d40e6728-d5ef-4ac3-b960-784a5369a887", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "f5fbdf" },
-    body: JSON.stringify({
-      sessionId: "f5fbdf",
-      runId: "repro-1",
-      hypothesisId: "H1",
-      location: "components/ProjectImageStrip.tsx:24",
-      message: "ProjectImageStrip rendered",
-      data: { projectsCount: projects.length, category, count, offset },
-      timestamp: Date.now(),
-    }),
-  }).catch(() => {});
-  // #endregion
   const source = category ? projects.filter((p) => p.category === category) : projects;
-  if (!source.length) {
-    // #region agent log
-    fetch("http://127.0.0.1:7908/ingest/d40e6728-d5ef-4ac3-b960-784a5369a887", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "X-Debug-Session-Id": "f5fbdf" },
-      body: JSON.stringify({
-        sessionId: "f5fbdf",
-        runId: "repro-1",
-        hypothesisId: "H4",
-        location: "components/ProjectImageStrip.tsx:39",
-        message: "ProjectImageStrip source empty",
-        data: { category, projectsCount: projects.length },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
-    return null;
-  }
+  if (!source.length) return null;
 
   const rows = Array.from({ length: count }, (_, index) => source[(offset + index) % source.length]);
-  const tilt = ["sm:rotate-[-1deg]", "sm:rotate-[1deg]", "sm:rotate-[-0.5deg]", "sm:rotate-[0.5deg]"];
 
   return (
     <section className="border-t border-craftmark-line bg-craftmark-surface">
@@ -80,7 +47,7 @@ export function ProjectImageStrip({
           {rows.map((p, index) => (
             <figure
               key={`${p.id}-${index}`}
-              className={`rounded-lg border border-craftmark-line bg-white p-2 shadow-sm transition ${tilt[index % tilt.length]}`}
+              className="rounded-lg border border-craftmark-line bg-white p-2 shadow-sm transition"
             >
               <div className="aspect-[4/3] overflow-hidden rounded-md bg-craftmark-surface">
                 {/* eslint-disable-next-line @next/next/no-img-element */}

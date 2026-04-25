@@ -511,5 +511,41 @@
     "finish": "Suede",
     "tags": ["terracotta", "warm", "earth"],
     "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "granite-black-pearl",
+    "material": "Granite",
+    "colorName": "Black Pearl",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["black", "charcoal", "durable", "natural"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "granite-santa-cecilia",
+    "material": "Granite",
+    "colorName": "Santa Cecilia",
+    "thicknessOptions": ["2cm", "3cm"],
+    "finish": "Polished",
+    "tags": ["gold", "beige", "brown", "natural"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "porcelain-calacatta",
+    "material": "Porcelain",
+    "colorName": "Calacatta White",
+    "thicknessOptions": ["12mm", "20mm"],
+    "finish": "Polished",
+    "tags": ["white", "gray", "veining", "modern"],
+    "image": "/images/colors/placeholder.svg"
+  },
+  {
+    "id": "porcelain-statuario",
+    "material": "Porcelain",
+    "colorName": "Statuario",
+    "thicknessOptions": ["12mm", "20mm"],
+    "finish": "Matte",
+    "tags": ["white", "gray", "clean", "large-format"],
+    "image": "/images/colors/placeholder.svg"
   }
 ]

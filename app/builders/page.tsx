@@ -27,10 +27,10 @@ export default function BuildersPage() {
         subtitle="From custom homes to program work, every install follows the same standards."
         variant="imageFirstMuted"
         textAlign="right"
-        imagePosition="center top"
+        imagePosition="center center"
         frame="pill"
         layout="splitRight"
-        height="compact"
+        height="tall"
       />
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2">
