@@ -39,22 +39,27 @@ const credibilityItems = [
     title: "Results that last",
     body: "Built to professional standards-not just for move-in day, but long-term performance.",
   },
+  {
+    icon: "⌂",
+    title: "Family-owned accountability",
+    body: "Family-owned since 1979, delivering owner-level accountability and long-term value.",
+  },
 ];
 
 export default function HomeownersPage() {
   return (
     <>
       <PageIntro
-        eyebrow="Who the pros use"
+        eyebrow="Who the Pros Use."
         eyebrowClassName="text-5xl font-bold italic tracking-tight text-craftmark-navy sm:text-6xl"
         title="Homeowners"
-        titleClassName="text-4xl sm:text-5xl"
-        bodyClassName="mt-6 max-w-6xl text-xl leading-relaxed text-craftmark-muted sm:text-2xl"
+        titleClassName="hidden"
+        bodyClassName="mt-8 max-w-6xl text-xl leading-relaxed text-craftmark-muted sm:text-2xl"
       >
         <p className="text-xl font-semibold tracking-tight text-craftmark-text sm:text-2xl">
           The standards professionals trust-now for homeowners
         </p>
-        <p className="mt-6">
+        <p className="mt-4 leading-[1.8]">
           Craftmark is who the pros use-and now, we&apos;re open to homeowners. We bring the same
           fabrication standards, disciplined process, and professional-grade execution trusted by
           builders and contractors into your home renovation. That means better planning, cleaner
@@ -65,19 +70,27 @@ export default function HomeownersPage() {
           is done right, everything you see-and don&apos;t see-lasts.
         </p>
       </PageIntro>
-      <PageBannerImage
-        imageSrc={projects[1]?.image ?? "/images/colors/placeholder.svg"}
-        imageAlt="Homeowner project banner"
-        title="Kitchen and bath results you can picture in your home"
-        subtitle="Craftmark surfaces are fabricated with advanced equipment and installed by experienced crews who do this work every day. The result is a clean handoff, precise fit, and a finish that looks right - and stays right."
-        variant="imageFirst"
-        textAlign="left"
-        imagePosition="left center"
-        frame="rounded"
-        layout="contained"
-      />
+      <div className="lg:-mt-4 lg:mb-10">
+        <PageBannerImage
+          imageSrc={projects[1]?.image ?? "/images/colors/placeholder.svg"}
+          imageAlt="Homeowner project banner"
+          title="Kitchen and bath results you can picture in your home"
+          subtitle="Craftmark surfaces are fabricated with advanced equipment and installed by experienced crews who do this work every day. The result is a clean handoff, precise fit, and a finish that looks right - and stays right."
+          contentClassName="mt-10 sm:mt-12"
+          containerClassName="max-w-7xl px-4 sm:px-6"
+          titleClassName="max-w-6xl text-3xl font-semibold tracking-tight text-craftmark-text sm:text-4xl"
+          subtitleClassName="max-w-6xl text-xl leading-relaxed text-craftmark-muted sm:text-2xl"
+          imageShellClassName="mx-auto max-w-6xl lg:h-[34rem]"
+          height="tall"
+          variant="imageFirst"
+          textAlign="left"
+          imagePosition="left center"
+          frame="rounded"
+          layout="contained"
+        />
+      </div>
       <section className="border-t border-craftmark-line bg-craftmark-surface">
-        <div className="mx-auto max-w-[100rem] px-4 py-14 sm:px-6">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
           <h2 className="text-2xl font-semibold tracking-tight text-craftmark-text sm:text-3xl">
             Why professionals choose Craftmark - and why that matters for your home
           </h2>
@@ -90,7 +103,7 @@ export default function HomeownersPage() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {credibilityItems.map((item) => (
               <article key={item.title} className="rounded-lg border border-craftmark-line bg-white p-5">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-craftmark-surface text-lg font-semibold text-craftmark-navy">
+                <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-craftmark-surface text-2xl font-bold text-craftmark-navy">
                   {item.icon}
                 </div>
                 <h3 className="mt-4 text-lg font-semibold text-craftmark-text">{item.title}</h3>
@@ -112,7 +125,7 @@ export default function HomeownersPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-[100rem] px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-xl font-semibold text-craftmark-navy">Professional standards that show up at home</h2>
@@ -140,6 +153,7 @@ export default function HomeownersPage() {
         category="Kitchen"
         count={3}
         offset={0}
+        containerClassName="max-w-7xl px-4 sm:px-6 lg:px-6"
       />
     </>
   );

@@ -4,9 +4,9 @@ import { SITE, directionsUrl, fullAddress } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="border-t border-craftmark-line bg-craftmark-surface">
-      <div className="mx-auto max-w-[112rem] px-4 py-12 sm:px-6 lg:px-12">
-        <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-14 lg:gap-20">
-          <div className="flex flex-col items-center gap-3 md:flex-[1.3]">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+        <div className="grid gap-12 md:grid-cols-3 md:items-start md:gap-8">
+          <div className="flex flex-col items-center gap-3 text-center">
             <div className="inline-flex justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={SITE.logoPath} alt={SITE.name} className="h-[4.5rem] w-auto sm:h-[5rem] lg:h-[5.5rem]" />
@@ -15,7 +15,7 @@ export function Footer() {
               Trusted since {SITE.foundingDate} · Custom-built · Projects of any size
             </p>
           </div>
-          <div className="text-base text-craftmark-text md:flex-1">
+          <div className="text-base text-craftmark-text text-center">
             <p className="text-lg font-semibold text-craftmark-navy">Visit</p>
             <p className="mt-2">{fullAddress()}</p>
             <p className="mt-2">
@@ -34,7 +34,7 @@ export function Footer() {
               </a>
             </p>
           </div>
-          <div className="text-base md:flex-1">
+          <div className="text-base text-center">
             <p className="text-lg font-semibold text-craftmark-navy">Quick links</p>
             <ul className="mt-2 space-y-2 text-craftmark-text">
               <li>

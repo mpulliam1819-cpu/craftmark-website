@@ -114,7 +114,7 @@ export function BuildersWhyGraphic() {
       className="border-b-2 border-craftmark-line bg-craftmark-surface"
       aria-labelledby="builders-why-graphic-heading"
     >
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14">
         <div className="text-center">
           <h2
             id="builders-why-graphic-heading"

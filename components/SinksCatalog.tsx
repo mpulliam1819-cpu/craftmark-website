@@ -36,12 +36,12 @@ export function SinksCatalog({ sinks }: SinksCatalogProps) {
             onClick={() => setActiveSink(sink)}
             className="group rounded-lg border border-craftmark-line bg-white text-left shadow-sm transition hover:border-craftmark-navyLight"
           >
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-craftmark-surface">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-craftmark-surface p-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={sink.images[0]}
                 alt={sink.name}
-                className="h-full w-full object-cover opacity-95 transition group-hover:opacity-100"
+                className="h-full w-full object-contain opacity-95 transition group-hover:opacity-100"
               />
             </div>
             <div className="p-4">
@@ -67,7 +67,7 @@ export function SinksCatalog({ sinks }: SinksCatalogProps) {
           onClick={() => setActiveSink(null)}
         >
           <div
-            className="max-h-[90vh] w-full max-w-3xl overflow-auto rounded-lg bg-white p-6 shadow-xl"
+            className="max-h-[94vh] w-full max-w-5xl overflow-auto rounded-lg bg-white p-6 shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between gap-4">
@@ -109,9 +109,9 @@ export function SinksCatalog({ sinks }: SinksCatalogProps) {
               </div>
             ) : null}
 
-            <div className="relative mt-4 aspect-[4/3] w-full overflow-hidden rounded-md bg-craftmark-surface">
+            <div className="relative mt-4 aspect-[16/10] w-full overflow-hidden rounded-md bg-craftmark-surface p-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={activeImage} alt={activeSink.name} className="h-full w-full object-cover" />
+              <img src={activeImage} alt={activeSink.name} className="h-full w-full object-contain" />
             </div>
 
             {activeImages.length > 1 ? (
@@ -134,11 +134,11 @@ export function SinksCatalog({ sinks }: SinksCatalogProps) {
               </div>
             ) : null}
 
-            <p className="mt-5 text-sm leading-relaxed text-craftmark-muted">{activeSink.description}</p>
+            <p className="mt-5 text-base leading-relaxed text-craftmark-muted sm:text-lg">{activeSink.description}</p>
 
             <div className="mt-4">
-              <p className="text-sm font-semibold text-craftmark-text">Highlights</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-craftmark-muted">
+              <p className="text-base font-semibold text-craftmark-text sm:text-lg">Highlights</p>
+              <ul className="mt-2 list-disc space-y-1.5 pl-5 text-base text-craftmark-muted sm:text-lg">
                 {activeSink.features.map((feature) => (
                   <li key={feature}>{feature}</li>
                 ))}
@@ -146,8 +146,8 @@ export function SinksCatalog({ sinks }: SinksCatalogProps) {
             </div>
 
             <div className="mt-4">
-              <p className="text-sm font-semibold text-craftmark-text">Technical information</p>
-              <ul className="mt-2 space-y-1 text-sm text-craftmark-muted">
+              <p className="text-base font-semibold text-craftmark-text sm:text-lg">Technical information</p>
+              <ul className="mt-2 space-y-1.5 text-base text-craftmark-muted sm:text-lg">
                 {activeSink.technicalInfo.map((item) => (
                   <li key={item}>{item}</li>
                 ))}

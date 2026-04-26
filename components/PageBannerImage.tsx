@@ -7,12 +7,16 @@ type PageBannerImageProps = {
   titleClassName?: string;
   /** Overrides default subtitle typography (still gets mx-auto and max-width). */
   subtitleClassName?: string;
+  /** Overrides spacing/alignment wrapper around title/subtitle below the image. */
+  contentClassName?: string;
   height?: "compact" | "default" | "tall" | "hero";
   variant?: "imageFirst" | "imageFirstMuted";
   textAlign?: "left" | "center" | "right";
   imagePosition?: string;
   frame?: "rounded" | "pill" | "soft";
   layout?: "contained" | "wide" | "splitLeft" | "splitRight" | "fullBleed";
+  /** Optional override for outer content width + horizontal padding wrapper. */
+  containerClassName?: string;
 };
 
 const heightClass: Record<NonNullable<PageBannerImageProps["height"]>, string> = {
@@ -29,12 +33,14 @@ export function PageBannerImage({
   subtitle,
   titleClassName,
   subtitleClassName,
+  contentClassName,
   height = "default",
   variant = "imageFirst",
   textAlign = "left",
   imagePosition = "center",
   frame = "rounded",
   layout = "contained",
+  containerClassName,
 }: PageBannerImageProps) {
   const alignClass = textAlign === "center" ? "text-center" : textAlign === "right" ? "text-right" : "text-left";
   const frameClass =
@@ -63,7 +69,7 @@ export function PageBannerImage({
 
   return (
     <section className="border-y border-craftmark-line bg-craftmark-surface">
-      <div className={`mx-auto py-10 sm:py-12 ${layoutClass}`}>
+      <div className={`mx-auto py-10 sm:py-12 ${containerClassName ?? layoutClass}`}>
         <div className={`relative overflow-hidden ${imageShellClass} ${heightClass[height]}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -74,7 +80,7 @@ export function PageBannerImage({
           />
         </div>
         {title || subtitle ? (
-          <div className={`mt-6 sm:mt-7 ${alignClass}`}>
+          <div className={`${contentClassName ?? "mt-6 sm:mt-7"} ${alignClass}`}>
             {title ? <h2 className={titleClass}>{title}</h2> : null}
             {subtitle ? (
               <p

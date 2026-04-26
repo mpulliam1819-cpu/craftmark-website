@@ -17,11 +17,17 @@ const projects = projectsRaw as ProjectEntry[];
 export default function CommercialPage() {
   return (
     <>
-      <PageIntro title="Commercial" titleClassName="text-4xl sm:text-5xl">
+      <PageIntro
+        eyebrow="Commercial"
+        eyebrowClassName="text-5xl font-bold italic tracking-tight text-craftmark-navy sm:text-6xl"
+        title="Commercial"
+        titleClassName="hidden"
+        bodyClassName="mt-8 max-w-6xl text-xl leading-relaxed text-craftmark-muted sm:text-2xl"
+      >
         <p className="text-xl font-semibold tracking-tight text-craftmark-text sm:text-2xl">
           Built for commercial scale. Trusted by professionals nationwide.
         </p>
-        <p className="mt-6">
+        <p className="mt-4 leading-[1.8]">
           Craftmark provides large-scale fabrication capacity for commercial projects nationwide, with
           domestic cut-to-size production shipped in planned releases so material arrives as you need it
           instead of all at once—helping support stronger cash flow and cleaner site coordination. From
@@ -29,19 +35,25 @@ export default function CommercialPage() {
           teams deliver repeatable quality with disciplined scheduling and accountable handoffs.
         </p>
       </PageIntro>
-      <PageBannerImage
-        imageSrc="/images/commercial-fabrication-hero.png"
-        imageAlt="Commercial fabrication floor and staged stone shipments for national programs"
-        title="Fabrication and shipping built for national reach"
-        subtitle="From regional builds to multi-site programs, our teams deliver repeatable quality and predictable throughput—without compromising finish or coordination."
-        variant="imageFirstMuted"
-        textAlign="left"
-        imagePosition="center center"
-        frame="soft"
-        layout="contained"
-        height="compact"
-      />
-      <section className="mx-auto max-w-[100rem] px-4 py-14 sm:px-6">
+      <div className="lg:-mt-4 lg:mb-10">
+        <PageBannerImage
+          imageSrc="/images/commercial-fabrication-hero.png"
+          imageAlt="Commercial fabrication floor and staged stone shipments for national programs"
+          title="Fabrication and shipping built for national reach"
+        subtitle="From regional builds to multi-site programs, our fabrication and logistics are designed for scale—delivering consistent quality, predictable throughput, and disciplined coordination from start to finish. The result is a partner that helps reduce complexity and support long-term operational success."
+        contentClassName="mt-10 sm:mt-12"
+        subtitleClassName="mt-5 max-w-6xl text-xl leading-relaxed text-craftmark-muted sm:text-2xl"
+        imageShellClassName="mx-auto max-w-6xl lg:h-[34rem]"
+          variant="imageFirstMuted"
+          textAlign="left"
+          imagePosition="center center"
+          frame="soft"
+          layout="contained"
+        height="tall"
+          containerClassName="max-w-7xl px-4 sm:px-6"
+        />
+      </div>
+      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-xl font-semibold text-craftmark-navy">
@@ -80,6 +92,7 @@ export default function CommercialPage() {
         subtitle="Multifamily turnover, coordinated commercial programs, and installs built for throughput—not one-off showcase work."
         highlightIds={["chestnut-multifamily-1", "camelot-commercial-2", "chestnut-multifamily-2"]}
         count={3}
+        containerClassName="max-w-7xl px-4 sm:px-6 lg:px-6"
       />
     </>
   );

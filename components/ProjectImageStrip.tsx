@@ -15,6 +15,7 @@ type ProjectImageStripProps = {
   offset?: number;
   ctaHref?: string;
   ctaLabel?: string;
+  containerClassName?: string;
 };
 
 export function ProjectImageStrip({
@@ -27,6 +28,7 @@ export function ProjectImageStrip({
   offset = 0,
   ctaHref = "/projects",
   ctaLabel = "View all projects",
+  containerClassName,
 }: ProjectImageStripProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const byId = new Map(projects.map((p) => [p.id, p]));
@@ -61,7 +63,7 @@ export function ProjectImageStrip({
 
   return (
     <section className="border-t border-craftmark-line bg-craftmark-surface">
-      <div className="mx-auto max-w-[100rem] px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+      <div className={`mx-auto py-14 sm:py-16 ${containerClassName ?? "max-w-[100rem] px-4 sm:px-6 lg:px-8"}`}>
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight text-craftmark-text sm:text-4xl">{title}</h2>

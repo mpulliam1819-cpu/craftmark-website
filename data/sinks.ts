@@ -129,7 +129,7 @@ export const sinksCatalog: SinkProduct[] = [
       "Bundle includes cutting board, strainer, sink grid, flexible mat, and sink",
     ],
     technicalInfo: ["Dimensions: L 32 in. x W 19 in. x D 10 in."],
-    images: ["/sinks/BL3219S_1.webp", "/sinks/BL3219S03_1.webp", "/sinks/BL3219S_Dimensions.webp"],
+    images: ["/sinks/BL3219S03_1.webp", "/sinks/BL3219S_1.webp", "/sinks/BL3219S_Dimensions.webp"],
   },
   {
     id: "mazi-204",
@@ -246,7 +246,7 @@ export const sinksCatalog: SinkProduct[] = [
       "Outside Dimensions: L 31 in. x W 19 in. x D 9 in.",
       "Inside Dimensions: L 29 in. x W 17-1/8 in. x D 9 in.",
     ],
-    images: ["/sinks/DR3119_01.webp", "/sinks/DR31119_Bundle.webp", "/sinks/DR3119Accessories.webp"],
+    images: ["/sinks/DR31119_Bundle.webp", "/sinks/DR3119_01.webp", "/sinks/DR3119Accessories.webp"],
   },
   {
     id: "mazi-efs3320",
