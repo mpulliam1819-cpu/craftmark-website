@@ -15,13 +15,13 @@ export function AudienceCtas({
     <div className="mt-8 flex flex-wrap gap-3">
       <Link
         href={primaryHref}
-        className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-5 py-3 text-sm font-semibold text-white hover:bg-craftmark-navyLight"
+        className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-5 py-3 text-base font-semibold text-white hover:bg-craftmark-navyLight"
       >
         {primaryLabel}
       </Link>
       <Link
         href={secondaryHref}
-        className="inline-flex items-center justify-center rounded-md border border-craftmark-navy px-5 py-3 text-sm font-semibold text-craftmark-navy hover:bg-craftmark-surface"
+        className="inline-flex items-center justify-center rounded-md border border-craftmark-navy px-5 py-3 text-base font-semibold text-craftmark-navy hover:bg-craftmark-surface"
       >
         {secondaryLabel}
       </Link>

@@ -161,22 +161,29 @@ export function ProjectGallery({
         </div>
       ) : null}
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
         {filtered.map((p, index) => (
           <button
             type="button"
             key={projectRowKey(p)}
             onClick={() => setActiveIndex(index)}
-            className="rounded-lg border border-craftmark-line bg-white text-left shadow-sm transition hover:border-craftmark-navyLight"
+            className="flex h-full flex-col rounded-lg border border-craftmark-line bg-white text-left shadow-sm transition hover:border-craftmark-navyLight"
           >
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-craftmark-surface">
+            <div className="relative aspect-[5/4] w-full overflow-hidden rounded-t-lg bg-craftmark-surface">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={p.image} alt={p.caption} className="h-full w-full object-cover" />
+              <img
+                src={p.image}
+                alt={p.caption}
+                className="h-full w-full object-cover"
+                style={p.imagePosition ? { objectPosition: p.imagePosition } : undefined}
+              />
             </div>
-            <div className="p-4">
+            <div className="flex flex-1 flex-col p-5">
               <p className="text-xs font-semibold uppercase text-craftmark-navy">{p.category}</p>
-              <h3 className="mt-1 text-lg font-semibold text-craftmark-text">{p.projectName}</h3>
-              <p className="mt-2 text-sm text-craftmark-muted">{p.caption}</p>
+              <h3 className="mt-1 min-h-[3.5rem] text-xl font-semibold leading-snug text-craftmark-text">
+                {p.projectName}
+              </h3>
+              <p className="mt-2 min-h-[3.75rem] text-base leading-relaxed text-craftmark-muted">{p.caption}</p>
             </div>
           </button>
         ))}

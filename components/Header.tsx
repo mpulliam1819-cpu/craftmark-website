@@ -14,15 +14,20 @@ const nav: NavItem[] = [
   { href: "/homeowners", label: "Homeowners" },
   { href: "/builders", label: "Builders" },
   { href: "/commercial", label: "Commercial" },
+  { href: "/products/partners", label: "Partners" },
   {
     href: "/products",
     label: "Products",
     children: [
       { href: "/colors", label: "Color Explorer" },
       { href: "/remnants", label: "Remnants" },
+      { href: "/products/closeouts", label: "Closeouts" },
+      { href: "/products/materials", label: "Materials" },
+      { href: "/products/sinks-and-edges", label: "Sinks & edges" },
     ],
   },
   { href: "/projects", label: "Projects" },
+  { href: "/resources", label: "Resources" },
   {
     href: "/about-us",
     label: "About",
@@ -82,79 +87,80 @@ export function Header() {
 
   return (
     <header ref={headerRef} className="relative bg-transparent">
-      <div className="flex flex-wrap items-center justify-between gap-4 border-x border-t border-craftmark-line bg-white px-4 py-3 sm:flex-nowrap sm:px-6 lg:px-10">
-        <div className="min-w-[12rem] shrink-0">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3 border-x border-t border-craftmark-line bg-white px-4 py-4 sm:flex-nowrap sm:items-end sm:gap-6 sm:px-6 sm:py-5 lg:gap-8 lg:px-10 lg:py-6">
+        <div className="min-w-0 shrink-0 sm:min-w-[14rem]">
           <Link href="/" className="inline-flex items-center text-lg font-semibold text-craftmark-navy">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={SITE.logoPath} alt={SITE.name} className="h-12 w-auto sm:h-[3.5rem]" />
+            <img src={SITE.logoPath} alt={SITE.name} className="h-[4.5rem] w-auto sm:h-[5rem] lg:h-[5.5rem]" />
           </Link>
         </div>
-        <div className="min-w-0 flex-1">
+        <div className="min-w-0 flex-1 sm:pb-1">
           <div className="hidden sm:block">
-            <div className="flex items-center">
-              <nav className="flex w-full">
-                <ul className="flex w-full items-center justify-between whitespace-nowrap px-3 text-[1.6rem] font-semibold text-craftmark-text lg:px-5">
-                  {nav.map((item) => (
-                    <li
-                      key={item.href}
-                      className="relative"
-                      onMouseEnter={() =>
-                        item.children ? openMenu(item.label) : setOpenDesktopMenu(null)
-                      }
-                      onMouseLeave={() => (item.children ? scheduleCloseMenu() : undefined)}
-                    >
-                      {item.children ? (
-                        <div className="inline-flex items-center">
-                          <Link
-                            href={item.href}
-                            className="block rounded-md px-2 py-2 transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy"
-                          >
-                            {item.label}
-                          </Link>
-                          <button
-                            type="button"
-                            className="rounded-md px-1.5 py-2 text-xs text-craftmark-muted transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy"
-                            aria-label={`Toggle ${item.label} menu`}
-                            onClick={() =>
-                              setOpenDesktopMenu((prev) => (prev === item.label ? null : item.label))
-                            }
-                          >
-                            ▾
-                          </button>
-                        </div>
-                      ) : (
+            <nav
+              className="flex w-full min-w-0 pr-40 sm:pr-48 lg:pr-60"
+              aria-label="Primary"
+            >
+              <ul className="flex w-full min-w-0 items-center justify-between gap-0.5 whitespace-nowrap px-0 text-xl font-semibold leading-snug text-craftmark-text sm:gap-1 sm:text-2xl lg:gap-1.5 lg:px-1 lg:text-[2rem]">
+                {nav.map((item) => (
+                  <li
+                    key={item.href}
+                    className="relative shrink-0"
+                    onMouseEnter={() =>
+                      item.children ? openMenu(item.label) : setOpenDesktopMenu(null)
+                    }
+                    onMouseLeave={() => (item.children ? scheduleCloseMenu() : undefined)}
+                  >
+                    {item.children ? (
+                      <div className="inline-flex items-center">
                         <Link
                           href={item.href}
-                          className="block rounded-md px-2 py-2 transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy"
+                          className="block rounded-md px-2 py-3 transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy lg:px-4"
                         >
                           {item.label}
                         </Link>
-                      )}
-                      {item.children && openDesktopMenu === item.label ? (
-                        <div className="absolute left-1/2 z-30 mt-1 min-w-[13rem] -translate-x-1/2 rounded-md border border-craftmark-line bg-white p-2 shadow-md">
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              className="block rounded-md px-3 py-2 text-sm font-medium text-craftmark-text hover:bg-craftmark-surface hover:text-craftmark-navy"
-                              onClick={() => setOpenDesktopMenu(null)}
-                            >
-                              {child.label}
-                            </Link>
-                          ))}
-                        </div>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
+                        <button
+                          type="button"
+                          className="rounded-md px-1.5 py-3 text-sm text-craftmark-muted transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy lg:px-2"
+                          aria-label={`Toggle ${item.label} menu`}
+                          onClick={() =>
+                            setOpenDesktopMenu((prev) => (prev === item.label ? null : item.label))
+                          }
+                        >
+                          ▾
+                        </button>
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="block rounded-md px-2 py-3 transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy lg:px-4"
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                    {item.children && openDesktopMenu === item.label ? (
+                      <div className="absolute left-1/2 z-30 mt-1 min-w-[13rem] -translate-x-1/2 rounded-md border border-craftmark-line bg-white p-2 shadow-md">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="block rounded-md px-3 py-2 text-base font-medium text-craftmark-text hover:bg-craftmark-surface hover:text-craftmark-navy"
+                            onClick={() => setOpenDesktopMenu(null)}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
-          <div className="mt-2 sm:hidden">
+          <div className="mt-1 sm:hidden">
             <div className="flex items-center justify-between gap-3">
               <button
                 type="button"
-                className="inline-flex items-center rounded-md border border-craftmark-line px-3 py-2 text-sm font-semibold text-craftmark-text"
+                className="inline-flex items-center rounded-md border border-craftmark-line px-3 py-2.5 text-base font-semibold text-craftmark-text"
                 onClick={() => setOpenMobileMenu((prev) => !prev)}
               >
                 Menu
@@ -162,13 +168,13 @@ export function Header() {
               <div className="flex gap-2">
                 <Link
                   href="/book-consult"
-                  className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-3 py-2 text-sm font-semibold text-white hover:bg-craftmark-navyLight"
+                  className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-3 py-2.5 text-base font-semibold text-white hover:bg-craftmark-navyLight"
                 >
                   Book Consult
                 </Link>
                 <Link
                   href="/quote-request"
-                  className="inline-flex items-center justify-center rounded-md border border-craftmark-navy px-3 py-2 text-sm font-semibold text-craftmark-navy hover:bg-craftmark-surface"
+                  className="inline-flex items-center justify-center rounded-md border border-craftmark-navy px-3 py-2.5 text-base font-semibold text-craftmark-navy hover:bg-craftmark-surface"
                 >
                   Request Quote
                 </Link>
@@ -181,7 +187,7 @@ export function Header() {
                     <div className="flex items-center justify-between gap-2">
                       <Link
                         href={item.href}
-                        className="rounded-md px-2 py-1.5 text-sm font-semibold text-craftmark-text hover:bg-craftmark-surface hover:text-craftmark-navy"
+                        className="rounded-md px-2 py-1.5 text-base font-semibold text-craftmark-text hover:bg-craftmark-surface hover:text-craftmark-navy"
                         onClick={() => setOpenMobileMenu(false)}
                       >
                         {item.label}
@@ -189,7 +195,7 @@ export function Header() {
                       {item.children ? (
                         <button
                           type="button"
-                          className="rounded-md px-2 py-1 text-xs text-craftmark-muted"
+                          className="rounded-md px-2 py-1.5 text-sm text-craftmark-muted"
                           onClick={() =>
                             setOpenMobileSubmenu((prev) => (prev === item.label ? null : item.label))
                           }
@@ -223,16 +229,16 @@ export function Header() {
         </div>
       </div>
       <div className="pointer-events-none absolute right-4 top-full z-20 hidden -translate-y-px sm:block sm:right-6 lg:right-10">
-        <div className="pointer-events-auto inline-flex items-center gap-3 rounded-b-lg border border-craftmark-line bg-white px-4 py-2.5">
+        <div className="pointer-events-auto inline-flex items-center gap-3 rounded-b-lg border border-craftmark-line border-t-0 bg-white px-5 py-3.5 shadow-sm">
           <Link
             href="/book-consult"
-            className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-4 py-2.5 text-sm font-semibold text-white hover:bg-craftmark-navyLight"
+            className="inline-flex items-center justify-center rounded-md bg-craftmark-navy px-5 py-3 text-base font-semibold text-white hover:bg-craftmark-navyLight"
           >
             Book Consult
           </Link>
           <Link
             href="/quote-request"
-            className="inline-flex items-center justify-center rounded-md border border-craftmark-navy px-4 py-2.5 text-sm font-semibold text-craftmark-navy hover:bg-craftmark-surface"
+            className="inline-flex items-center justify-center rounded-md border border-craftmark-navy px-5 py-3 text-base font-semibold text-craftmark-navy hover:bg-craftmark-surface"
           >
             Request Quote
           </Link>

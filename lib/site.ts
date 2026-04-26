@@ -1,12 +1,12 @@
 export const SITE = {
   name: "Craftmark Countertops",
-  tagline: "Who the pros use — now open to homeowners.",
+  tagline: "Custom fabrication and installation.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.example.com",
-  phone: "(555) 000-1979",
-  email: "hello@craftmarkcountertops.example",
+  phone: "(770) 242-8469",
+  email: "sales@agcomarble.net",
   logoPath: "/images/logo.png",
   address: {
-    streetAddress: "2782 Simpson Circle",
+    streetAddress: "2772 Simpson Cir",
     addressLocality: "Norcross",
     addressRegion: "GA",
     postalCode: "30071",

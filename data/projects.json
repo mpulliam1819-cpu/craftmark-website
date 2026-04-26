@@ -5,6 +5,7 @@
     "category": "Kitchen",
     "caption": "Bright kitchen install with polished edge profile.",
     "image": "/images/projects/Brookmont-Chafin-Communities-Kitchen.jpg",
+    "imagePosition": "center 44%",
     "completedAt": "2026-01"
   },
   {
@@ -41,10 +42,11 @@
   },
   {
     "id": "chimney-outdoor-2",
-    "projectName": "Chimney Oaks Outdoor",
-    "category": "Outdoor",
-    "caption": "Extended countertop run with weather-friendly material selection.",
-    "image": "/images/projects/Chimney Oaks - 5.jpg",
+    "projectName": "Children's Healthcare",
+    "category": "Commercial",
+    "caption": "Nurse station childrens healthcare.",
+    "image": "/images/projects/Homepage-Project-6.jpg",
+    "imagePosition": "center 38%",
     "completedAt": "2025-11"
   },
   {

@@ -13,39 +13,111 @@ export const metadata: Metadata = {
 };
 
 const projects = projectsRaw as ProjectEntry[];
+const credibilityItems = [
+  {
+    icon: "✓",
+    title: "Process you can trust",
+    body: "Pros rely on a proven process with clear handoffs and accountability. Homeowners get clarity, coordination, and less stress.",
+  },
+  {
+    icon: "◇",
+    title: "Precision that shows",
+    body: "Tight tolerances and exact fits lead to cleaner seams and better finishes.",
+  },
+  {
+    icon: "⏱",
+    title: "Timelines you can rely on",
+    body: "Dependable fabrication and installation schedules reduce delays and surprises.",
+  },
+  {
+    icon: "⚙",
+    title: "Advanced capabilities",
+    body: "Our shop handles complex details and materials without cutting corners.",
+  },
+  {
+    icon: "★",
+    title: "Results that last",
+    body: "Built to professional standards-not just for move-in day, but long-term performance.",
+  },
+];
 
 export default function HomeownersPage() {
   return (
     <>
-      <PageIntro eyebrow="Homeowners" title="Professional results for real homes.">
-        Craftmark brings pro-grade fabrication and installation to kitchen and bath remodels—
-        with clear guidance and fewer surprises along the way. Whether it is a single surface or
-        a full home refresh, Craftmark works on projects of any size.
+      <PageIntro title="Homeowners" titleClassName="text-4xl sm:text-5xl">
+        <p className="text-xl font-semibold tracking-tight text-craftmark-text sm:text-2xl">
+          Professional results for real homes.
+        </p>
+        <p className="mt-6">
+          At Craftmark, we bring the same fabrication standards and disciplined process trusted by
+          professionals into your home renovation. That means better planning, cleaner installs, and
+          results that hold up long after the project is complete. Whether you are updating a single
+          space or completing a full home refresh, our team delivers pro-grade craftsmanship with
+          clear communication and fewer surprises—from first measurement to final handoff.
+          Professional process. Professional results. Because when the work behind the scenes is done
+          right, everything you see - and do not see - lasts.
+        </p>
       </PageIntro>
       <PageBannerImage
         imageSrc={projects[1]?.image ?? "/images/colors/placeholder.svg"}
         imageAlt="Homeowner project banner"
         title="Kitchen and bath results you can picture in your home"
-        subtitle="Professional install quality with clean handoff and lasting finish."
+        subtitle="Craftmark surfaces are fabricated with advanced equipment and installed by experienced crews who do this work every day. The result is a clean handoff, precise fit, and a finish that looks right - and stays right."
         variant="imageFirst"
         textAlign="left"
         imagePosition="left center"
         frame="rounded"
         layout="contained"
       />
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="border-t border-craftmark-line bg-craftmark-surface">
+        <div className="mx-auto max-w-[100rem] px-4 py-14 sm:px-6">
+          <h2 className="text-2xl font-semibold tracking-tight text-craftmark-text sm:text-3xl">
+            Why professionals choose Craftmark - and why that matters for your home
+          </h2>
+          <p className="mt-4 max-w-4xl text-lg text-craftmark-muted">
+            Professionals choose Craftmark because our process is predictable, precise, and proven.
+            Homeowners benefit from that same discipline through smoother installs, fewer surprises,
+            and results that last.
+          </p>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {credibilityItems.map((item) => (
+              <article key={item.title} className="rounded-lg border border-craftmark-line bg-white p-5">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-craftmark-surface text-lg font-semibold text-craftmark-navy">
+                  {item.icon}
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-craftmark-text">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-craftmark-muted">{item.body}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 rounded-lg border border-craftmark-line bg-white p-6">
+            <h3 className="text-lg font-semibold text-craftmark-navy">Homeowner advantage</h3>
+            <ul className="mt-3 list-disc space-y-1 pl-5 text-craftmark-muted">
+              <li>Less stress through clear communication</li>
+              <li>Better results through professional standards</li>
+              <li>Peace of mind from a process trusted by pros</li>
+            </ul>
+            <p className="mt-4 text-base font-semibold text-craftmark-text">
+              Trusted by the pros. Built for your home.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="mx-auto max-w-[100rem] px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
-            <h2 className="text-xl font-semibold text-craftmark-navy">What we emphasize</h2>
+            <h2 className="text-xl font-semibold text-craftmark-navy">Professional standards that show up at home</h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-craftmark-muted">
-              <li>Kitchen and bath remodels</li>
-              <li>Fit and finish you can see at install</li>
-              <li>Professional installation teams</li>
-              <li>Clear expectations from templating through completion</li>
+              <li>Advanced fabrication capabilities</li>
+              <li>Timely production and installation</li>
+              <li>Careful installation with lasting results</li>
+              <li>Responsive service and long-term satisfaction</li>
             </ul>
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-craftmark-navy">Projects of any size</h2>
+            <h2 className="text-xl font-semibold text-craftmark-navy">Solid as stone. Peace of mind, built in.</h2>
             <p className="mt-4 text-craftmark-muted">
               From a single vanity top to a full kitchen and multiple baths, the same standards
               apply. Tell us what you are planning—we will help you understand the path forward.

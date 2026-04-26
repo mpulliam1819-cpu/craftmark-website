@@ -28,11 +28,9 @@ export function QuoteRequestForm() {
     setError(null);
     setPending(true);
     const fd = new FormData(e.currentTarget);
-    const body = Object.fromEntries(fd.entries());
     const res = await fetch("/api/quote-request", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
+      body: fd,
     });
     setPending(false);
     if (!res.ok) {
@@ -67,6 +65,18 @@ export function QuoteRequestForm() {
       <Field label="Desired material" name="desiredMaterial" />
       <Field label="Brand / line (if quartz)" name="brand" />
       <Field label="Desired color" name="desiredColor" />
+      <div>
+        <label className="block text-sm font-medium text-craftmark-text">Upload drawing (optional)</label>
+        <input
+          name="drawing"
+          type="file"
+          accept=".pdf,.dwg,.dxf,image/*"
+          className="mt-1 w-full rounded-md border border-craftmark-line px-3 py-2 text-craftmark-text file:mr-4 file:rounded-md file:border-0 file:bg-craftmark-surface file:px-3 file:py-2 file:text-sm file:font-semibold file:text-craftmark-navy hover:file:bg-craftmark-line/40"
+        />
+        <p className="mt-1 text-xs text-craftmark-muted">
+          Attach a plan, sketch, or drawing file (PDF, DWG, DXF, or image).
+        </p>
+      </div>
       <div>
         <label className="block text-sm font-medium text-craftmark-text">Project description</label>
         <textarea

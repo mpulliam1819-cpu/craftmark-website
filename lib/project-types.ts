@@ -20,6 +20,7 @@ export type ProjectEntry = {
   category: string;
   caption: string;
   image: string;
+  imagePosition?: string;
   completedAt?: string;
 };
 

@@ -6,7 +6,15 @@
     "thicknessOptions": ["1/2\""],
     "finish": "Matte",
     "tags": ["white", "clean"],
-    "image": "/images/colors/placeholder.svg"
+    "image": "/images/colors/placeholder.svg",
+    "swatchImages": [
+      "/images/colors/placeholder.svg",
+      "/images/colors/placeholder.svg"
+    ],
+    "slabImages": [
+      "/images/colors/placeholder.svg",
+      "/images/colors/placeholder.svg"
+    ]
   },
   {
     "id": "marble-carrara",
@@ -15,7 +23,14 @@
     "thicknessOptions": ["2cm", "3cm"],
     "finish": "Polished",
     "tags": ["white", "gray", "veining", "classic"],
-    "image": "/images/colors/placeholder.svg"
+    "image": "/images/colors/placeholder.svg",
+    "swatchImages": [
+      "/images/colors/placeholder.svg"
+    ],
+    "slabImages": [
+      "/images/colors/placeholder.svg",
+      "/images/colors/placeholder.svg"
+    ]
   },
   {
     "id": "marble-calacatta-gold",

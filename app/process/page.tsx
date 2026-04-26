@@ -55,7 +55,7 @@ export default function ProcessPage() {
         layout="contained"
         height="compact"
       />
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[100rem] px-4 py-14 sm:px-6">
         <ol className="space-y-8 border-l border-craftmark-line pl-7 sm:pl-8">
           {steps.map((s, i) => (
             <li key={s.title} className="relative pb-1">

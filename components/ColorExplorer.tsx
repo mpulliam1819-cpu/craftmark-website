@@ -1,6 +1,6 @@
 "use client";
 
-import { colorRowKey, type ColorEntry } from "@/lib/color-types";
+import { colorRowKey, primarySwatchImage, type ColorEntry } from "@/lib/color-types";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
@@ -26,6 +26,18 @@ export function ColorExplorer({ colors }: { colors: ColorEntry[] }) {
   const [tag, setTag] = useState<string>("");
   const [q, setQ] = useState("");
   const [active, setActive] = useState<ColorEntry | null>(null);
+  const [activeView, setActiveView] = useState<"swatch" | "slab">("slab");
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (!active) return;
+    const hasSlabs = (active.slabImages?.length ?? 0) > 0;
+    const hasSwatches = (active.swatchImages?.length ?? 0) > 0;
+    if (hasSlabs) setActiveView("slab");
+    else if (hasSwatches) setActiveView("swatch");
+    else setActiveView("slab");
+    setActiveImageIndex(0);
+  }, [active]);
 
   useEffect(() => {
     if (material && material !== "Quartz") setBrand("");
@@ -60,6 +72,14 @@ export function ColorExplorer({ colors }: { colors: ColorEntry[] }) {
       return true;
     });
   }, [colors, material, brand, tag, q]);
+
+  const activeImages = useMemo(() => {
+    if (!active) return [];
+    if (activeView === "swatch") return active.swatchImages?.length ? active.swatchImages : [active.image];
+    return active.slabImages?.length ? active.slabImages : [active.image];
+  }, [active, activeView]);
+
+  const activeImageSrc = activeImages[activeImageIndex] ?? active?.image ?? "";
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
@@ -134,7 +154,7 @@ export function ColorExplorer({ colors }: { colors: ColorEntry[] }) {
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-craftmark-surface">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={c.image}
+                src={primarySwatchImage(c)}
                 alt=""
                 className="h-full w-full object-cover opacity-90 transition group-hover:opacity-100"
               />
@@ -194,8 +214,57 @@ export function ColorExplorer({ colors }: { colors: ColorEntry[] }) {
             </div>
             <div className="relative mt-4 aspect-[4/3] w-full overflow-hidden rounded-md bg-craftmark-surface">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={active.image} alt="" className="h-full w-full object-cover" />
+              <img src={activeImageSrc} alt="" className="h-full w-full object-cover" />
             </div>
+            <div className="mt-3 flex items-center gap-2">
+              <button
+                type="button"
+                className={`rounded-md px-3 py-1.5 text-xs font-semibold ${
+                  activeView === "swatch"
+                    ? "bg-craftmark-navy text-white"
+                    : "border border-craftmark-line text-craftmark-text hover:bg-craftmark-surface"
+                }`}
+                onClick={() => {
+                  setActiveView("swatch");
+                  setActiveImageIndex(0);
+                }}
+              >
+                Swatches
+              </button>
+              <button
+                type="button"
+                className={`rounded-md px-3 py-1.5 text-xs font-semibold ${
+                  activeView === "slab"
+                    ? "bg-craftmark-navy text-white"
+                    : "border border-craftmark-line text-craftmark-text hover:bg-craftmark-surface"
+                }`}
+                onClick={() => {
+                  setActiveView("slab");
+                  setActiveImageIndex(0);
+                }}
+              >
+                Full Slabs
+              </button>
+            </div>
+            {activeImages.length > 1 ? (
+              <div className="mt-3 grid grid-cols-4 gap-2">
+                {activeImages.map((img, index) => (
+                  <button
+                    key={`${img}-${index}`}
+                    type="button"
+                    onClick={() => setActiveImageIndex(index)}
+                    className={`overflow-hidden rounded-md border ${
+                      index === activeImageIndex
+                        ? "border-craftmark-navy"
+                        : "border-craftmark-line hover:border-craftmark-navyLight"
+                    }`}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={img} alt="" className="h-16 w-full object-cover" />
+                  </button>
+                ))}
+              </div>
+            ) : null}
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link
                 href={buildQuoteHref(active)}

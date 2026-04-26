@@ -4,19 +4,18 @@ import { SITE, directionsUrl, fullAddress } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="border-t border-craftmark-line bg-craftmark-surface">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="grid gap-10 md:grid-cols-3">
-          <div>
-            <div className="inline-flex items-center">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-12">
+        <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-12 lg:gap-16">
+          <div className="flex flex-col items-center gap-3 md:flex-[1.3]">
+            <div className="inline-flex justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={SITE.logoPath} alt={SITE.name} className="h-8 w-auto" />
+              <img src={SITE.logoPath} alt={SITE.name} className="h-[4.5rem] w-auto sm:h-[5rem] lg:h-[5.5rem]" />
             </div>
-            <p className="mt-2 text-sm text-craftmark-muted">{SITE.tagline}</p>
-            <p className="mt-4 text-sm font-medium text-craftmark-text">
+            <p className="mt-2 whitespace-nowrap text-center text-sm font-medium leading-snug text-craftmark-text lg:text-base">
               Trusted since {SITE.foundingDate} · Custom-built · Projects of any size
             </p>
           </div>
-          <div className="text-sm text-craftmark-text">
+          <div className="text-sm text-craftmark-text md:flex-1">
             <p className="font-semibold text-craftmark-navy">Visit</p>
             <p className="mt-2">{fullAddress()}</p>
             <p className="mt-2">
@@ -35,22 +34,22 @@ export function Footer() {
               </a>
             </p>
           </div>
-          <div className="text-sm">
+          <div className="text-sm md:flex-1">
             <p className="font-semibold text-craftmark-navy">Quick links</p>
             <ul className="mt-2 space-y-2 text-craftmark-text">
               <li>
-                <Link className="hover:text-craftmark-navyLight" href="/book-consult">
-                  Book a design consultation
-                </Link>
-              </li>
-              <li>
-                <Link className="hover:text-craftmark-navyLight" href="/quote-request">
-                  Request a quote
+                <Link className="hover:text-craftmark-navyLight" href="/colors">
+                  Color selector
                 </Link>
               </li>
               <li>
                 <Link className="hover:text-craftmark-navyLight" href="/remnants">
                   Remnants
+                </Link>
+              </li>
+              <li>
+                <Link className="hover:text-craftmark-navyLight" href="/resources">
+                  Resources
                 </Link>
               </li>
               <li>
@@ -61,9 +60,6 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <p className="mt-10 text-xs text-craftmark-muted">
-          Lead inquiries only. No online pricing or checkout.
-        </p>
       </div>
     </footer>
   );

@@ -1,6 +1,7 @@
+import type { ReactNode } from "react";
 import type { FAQItem } from "@/lib/faq-data";
 
-export function FaqList({ items }: { items: FAQItem[] }) {
+export function FaqList({ items, footer }: { items: FAQItem[]; footer?: ReactNode }) {
   return (
     <div className="divide-y divide-craftmark-line rounded-lg border border-craftmark-line bg-white">
       {items.map((item) => (
@@ -14,6 +15,11 @@ export function FaqList({ items }: { items: FAQItem[] }) {
           <p className="mt-3 text-sm leading-relaxed text-craftmark-muted">{item.answer}</p>
         </details>
       ))}
+      {footer ? (
+        <div className="px-4 py-4 text-center sm:px-6 sm:py-5">
+          {footer}
+        </div>
+      ) : null}
     </div>
   );
 }

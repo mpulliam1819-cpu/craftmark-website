@@ -33,7 +33,7 @@ export default function ProductsPage() {
         frame="rounded"
         layout="wide"
       />
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[100rem] px-4 py-14 sm:px-6">
         <div className="grid gap-8 md:grid-cols-2">
           {[
             { title: "Quartz countertops", body: "Durable, low-maintenance options for busy kitchens." },
@@ -56,6 +56,30 @@ export default function ProductsPage() {
             className="inline-flex rounded-md bg-craftmark-navy px-5 py-3 text-sm font-semibold text-white hover:bg-craftmark-navyLight"
           >
             Open Color Explorer
+          </Link>
+          <Link
+            href="/products/sinks-and-edges"
+            className="inline-flex rounded-md border border-craftmark-navy px-5 py-3 text-sm font-semibold text-craftmark-navy hover:bg-craftmark-surface"
+          >
+            Sinks & edges
+          </Link>
+          <Link
+            href="/products/materials"
+            className="inline-flex rounded-md border border-craftmark-navy px-5 py-3 text-sm font-semibold text-craftmark-navy hover:bg-craftmark-surface"
+          >
+            Materials
+          </Link>
+          <Link
+            href="/products/closeouts"
+            className="inline-flex rounded-md border border-craftmark-navy px-5 py-3 text-sm font-semibold text-craftmark-navy hover:bg-craftmark-surface"
+          >
+            Closeouts
+          </Link>
+          <Link
+            href="/products/partners"
+            className="inline-flex rounded-md border border-craftmark-navy px-5 py-3 text-sm font-semibold text-craftmark-navy hover:bg-craftmark-surface"
+          >
+            Partners
           </Link>
           <Link
             href="/quote-request"

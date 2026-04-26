@@ -1,6 +1,7 @@
 import { FaqList } from "@/components/FaqList";
 import { JsonLd } from "@/components/JsonLd";
 import { ProjectGallery } from "@/components/ProjectGallery";
+import { WhyChooseCraftmark } from "@/components/WhyChooseCraftmark";
 import type { ProjectEntry } from "@/lib/project-types";
 import { HOME_FAQ_PREVIEW } from "@/lib/faq-data";
 import { faqPageJsonLd } from "@/lib/faq-jsonld";
@@ -31,13 +32,10 @@ export default function HomePage() {
               className="h-full w-full scale-110 object-cover opacity-40 blur-[2px]"
             />
           </div>
-          <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">
+          <div className="relative mx-auto max-w-[100rem] px-4 py-20 sm:px-6 sm:py-24">
             <div className="max-w-3xl rounded-xl bg-white/75 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-              <p className="text-sm font-semibold uppercase tracking-wide text-craftmark-navy">
-                {SITE.tagline}
-              </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-craftmark-text sm:text-5xl">
-                The countertops the pros use — now open to homeowners.
+              <h1 className="text-4xl font-semibold tracking-tight text-craftmark-text sm:text-5xl">
+                Professional countertops and solid surfaces for every scope.
               </h1>
               <p className="mt-6 max-w-2xl text-lg text-craftmark-muted">
                 Craftmark serves homeowners, builders, commercial contractors, and large projects. We work
@@ -73,7 +71,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-craftmark-line bg-craftmark-surface">
-        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
+        <div className="mx-auto max-w-[100rem] px-4 py-8 sm:px-6 sm:py-10">
           <div className="overflow-hidden rounded-2xl border border-craftmark-line">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -88,7 +86,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <WhyChooseCraftmark />
+
+      <section className="mx-auto max-w-[100rem] px-4 py-16 sm:px-6">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="rounded-lg border border-craftmark-line bg-white p-6">
             <h2 className="text-lg font-semibold text-craftmark-navy">Homeowners</h2>
@@ -121,7 +121,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-t border-craftmark-line bg-craftmark-surface">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <div className="mx-auto max-w-[100rem] px-4 py-16 sm:px-6">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
               <h2 className="text-2xl font-semibold text-craftmark-text">Recent completed projects</h2>
@@ -143,23 +143,25 @@ export default function HomePage() {
       </section>
 
       <section className="border-t border-craftmark-line bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div>
-              <h2 className="text-2xl font-semibold text-craftmark-text">Questions we hear often</h2>
-              <p className="mt-2 max-w-2xl text-craftmark-muted">
-                Timelines, materials, service area, and how quoting works—without pricing hype.
-              </p>
-            </div>
-            <Link
-              href="/faq"
-              className="text-sm font-semibold text-craftmark-navy hover:text-craftmark-navyLight"
-            >
-              View all FAQs
-            </Link>
+        <div className="mx-auto max-w-[100rem] px-4 py-16 sm:px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-semibold text-craftmark-text">Questions we hear often</h2>
+            <p className="mt-2 text-craftmark-muted">
+              Timelines, materials, service area, and how quoting works—without pricing hype.
+            </p>
           </div>
-          <div className="mt-10 max-w-3xl">
-            <FaqList items={HOME_FAQ_PREVIEW} />
+          <div className="mx-auto mt-10 max-w-3xl">
+            <FaqList
+              items={HOME_FAQ_PREVIEW}
+              footer={
+                <Link
+                  href="/faq"
+                  className="text-sm font-semibold text-craftmark-navy hover:text-craftmark-navyLight"
+                >
+                  View all FAQs
+                </Link>
+              }
+            />
           </div>
         </div>
       </section>
