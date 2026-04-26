@@ -13671,3 +13671,23 @@
 {"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-2"},"timestamp":1777172235284}
 {"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-1"},"timestamp":1777172235285}
 {"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-2"},"timestamp":1777172235285}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:1","message":"project-types module loaded","data":{},"timestamp":1777172359791}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-kitchen-1"},"timestamp":1777172359797}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-kitchen-2"},"timestamp":1777172359799}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-1"},"timestamp":1777172359800}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-2"},"timestamp":1777172359802}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-1"},"timestamp":1777172359803}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-2"},"timestamp":1777172359805}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:1","message":"project-types module loaded","data":{},"timestamp":1777172361118}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-kitchen-1"},"timestamp":1777172361304}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-kitchen-2"},"timestamp":1777172361305}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-1"},"timestamp":1777172361306}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-2"},"timestamp":1777172361306}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-1"},"timestamp":1777172361307}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-2"},"timestamp":1777172361310}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-kitchen-1"},"timestamp":1777172361318}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-kitchen-2"},"timestamp":1777172361320}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-1"},"timestamp":1777172361322}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-2"},"timestamp":1777172361324}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-1"},"timestamp":1777172361326}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-2"},"timestamp":1777172361334}

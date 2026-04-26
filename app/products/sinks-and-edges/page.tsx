@@ -63,12 +63,6 @@ function EdgeShape({ shape }: { shape: EdgeShapeType }) {
           <path d="M8 10h78l22 16v24H8z" {...common} />
         </svg>
       );
-    case "roundTB":
-      return (
-        <svg viewBox="0 0 120 62" className="h-14 w-full max-w-[9rem]" aria-hidden>
-          <path d="M8 10h78a20 20 0 0 1 20 20v0a20 20 0 0 1-20 20H8z" {...common} />
-        </svg>
-      );
     case "halfBullnose":
       return (
         <svg viewBox="0 0 120 62" className="h-14 w-full max-w-[9rem]" aria-hidden>
@@ -99,12 +93,6 @@ function EdgeShape({ shape }: { shape: EdgeShapeType }) {
           <path d="M8 10h80l16 12v16l-16 12H8z" {...common} />
         </svg>
       );
-    case "premiumOneBevel":
-      return (
-        <svg viewBox="0 0 120 62" className="h-14 w-full max-w-[9rem]" aria-hidden>
-          <path d="M8 10h70l24 24v16H8z" {...common} />
-        </svg>
-      );
     case "dupont":
       return (
         <svg viewBox="0 0 120 62" className="h-14 w-full max-w-[9rem]" aria-hidden>
@@ -127,18 +115,6 @@ function EdgeShape({ shape }: { shape: EdgeShapeType }) {
       return (
         <svg viewBox="0 0 120 62" className="h-14 w-full max-w-[9rem]" aria-hidden>
           <path d="M8 10h72v10h10v8h10v18H8z" {...common} />
-        </svg>
-      );
-    case "doubleBullnose":
-      return (
-        <svg viewBox="0 0 120 62" className="h-14 w-full max-w-[9rem]" aria-hidden>
-          <path d="M8 10h68a18 18 0 0 1 0 36H8z" {...common} />
-        </svg>
-      );
-    case "crescent":
-      return (
-        <svg viewBox="0 0 120 62" className="h-14 w-full max-w-[9rem]" aria-hidden>
-          <path d="M8 10h76a22 22 0 0 1 22 22v0a22 22 0 0 1-22 22H8z" {...common} />
         </svg>
       );
   }
