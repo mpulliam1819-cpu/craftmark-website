@@ -39,11 +39,12 @@ export function ProjectImageStrip({
     fromHighlights?.length ? fromHighlights
     : category ? projects.filter((p) => p.category === category)
     : projects;
-  if (!source.length) return null;
 
   const rows =
-    fromHighlights?.length ? source.slice(0, count)
-    : Array.from({ length: count }, (_, index) => source[(offset + index) % source.length]);
+    source.length ?
+      (fromHighlights?.length ? source.slice(0, count)
+      : Array.from({ length: count }, (_, index) => source[(offset + index) % source.length]))
+    : [];
   const activeProject =
     activeIndex !== null && activeIndex >= 0 && activeIndex < rows.length ? rows[activeIndex] : null;
 
@@ -55,6 +56,8 @@ export function ProjectImageStrip({
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [activeIndex]);
+
+  if (!source.length) return null;
 
   return (
     <section className="border-t border-craftmark-line bg-craftmark-surface">

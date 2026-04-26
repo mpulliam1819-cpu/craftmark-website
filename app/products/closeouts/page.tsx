@@ -38,8 +38,8 @@ export default function ProductsCloseoutsPage() {
               </p>
               <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-craftmark-muted">
                 {featuredColors.map((item) => (
-                  <li key={item.id}>
-                    {item.name} ({item.brand})
+                  <li key={item.id ?? `${item.material}-${item.colorName}`}>
+                    {item.colorName} ({item.brand ?? "Unbranded"})
                   </li>
                 ))}
               </ul>
@@ -59,7 +59,7 @@ export default function ProductsCloseoutsPage() {
               </p>
               <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-craftmark-muted">
                 {featuredRemnants.map((item) => (
-                  <li key={item.id}>
+                  <li key={item.remnantId}>
                     {item.colorName} ({item.material})
                   </li>
                 ))}
