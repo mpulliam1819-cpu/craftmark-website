@@ -25,27 +25,23 @@ const sinkNotes = [
 
 const edgeProfiles = [
   { name: "Straight", tier: "Standard", shape: "straight" },
-  { name: "Quarter Round", tier: "Standard", shape: "quarterRound" },
+  { name: "Eased", tier: "Standard", shape: "quarterRound" },
   { name: "Quarter Bevel", tier: "Standard", shape: "quarterBevel" },
-  { name: "Round T&B", tier: "Premium", shape: "roundTB" },
-  { name: "Half Bullnose", tier: "Premium", shape: "halfBullnose" },
+  { name: "Roundover", tier: "Premium", shape: "halfBullnose" },
   { name: "Half Bevel", tier: "Premium", shape: "halfBevel" },
   { name: "Full Bullnose", tier: "Premium", shape: "fullBullnose" },
   { name: "Demi Bullnose", tier: "Premium", shape: "demiBullnose" },
   { name: "Bevel T&B", tier: "Premium", shape: "bevelTB" },
-  { name: "Premium One Bevel", tier: "Premium", shape: "premiumOneBevel" },
   { name: "Dupont", tier: "Premium", shape: "dupont" },
   { name: "Ogee", tier: "Premium", shape: "ogee" },
   { name: "Cove Dupont", tier: "Premium", shape: "coveDupont" },
   { name: "Waterfall", tier: "Premium", shape: "waterfall" },
-  { name: "Double Bullnose", tier: "Premium", shape: "doubleBullnose" },
-  { name: "Crescent", tier: "Premium", shape: "crescent" },
 ] as const;
 
 type EdgeShapeType = (typeof edgeProfiles)[number]["shape"];
 
 function EdgeShape({ shape }: { shape: EdgeShapeType }) {
-  const stroke = "#d98a57";
+  const stroke = "#1F4E79";
   const common = { fill: "none", stroke, strokeWidth: 2.2, strokeLinejoin: "round" as const };
 
   switch (shape) {
@@ -58,13 +54,13 @@ function EdgeShape({ shape }: { shape: EdgeShapeType }) {
     case "quarterRound":
       return (
         <svg viewBox="0 0 120 62" className="h-14 w-full max-w-[9rem]" aria-hidden>
-          <path d="M8 10h82a18 18 0 0 1 18 18v22H8z" {...common} />
+          <path d="M8 10h90a10 10 0 0 1 10 10v30H8z" {...common} />
         </svg>
       );
     case "quarterBevel":
       return (
         <svg viewBox="0 0 120 62" className="h-14 w-full max-w-[9rem]" aria-hidden>
-          <path d="M8 10h78l22 22v18H8z" {...common} />
+          <path d="M8 10h78l22 16v24H8z" {...common} />
         </svg>
       );
     case "roundTB":
@@ -82,7 +78,7 @@ function EdgeShape({ shape }: { shape: EdgeShapeType }) {
     case "halfBevel":
       return (
         <svg viewBox="0 0 120 62" className="h-14 w-full max-w-[9rem]" aria-hidden>
-          <path d="M8 10h78l22 16v24H8z" {...common} />
+          <path d="M8 10h78l22 22v18H8z" {...common} />
         </svg>
       );
     case "fullBullnose":

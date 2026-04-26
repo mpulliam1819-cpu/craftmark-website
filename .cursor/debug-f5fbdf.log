@@ -13658,3 +13658,16 @@
 {"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-2"},"timestamp":1777171699020}
 {"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-1"},"timestamp":1777171699020}
 {"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-2"},"timestamp":1777171699021}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:1","message":"project-types module loaded","data":{},"timestamp":1777172235252}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-kitchen-1"},"timestamp":1777172235277}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-kitchen-2"},"timestamp":1777172235278}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-1"},"timestamp":1777172235278}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-2"},"timestamp":1777172235279}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-1"},"timestamp":1777172235280}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-2"},"timestamp":1777172235280}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-kitchen-1"},"timestamp":1777172235282}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-kitchen-2"},"timestamp":1777172235282}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-1"},"timestamp":1777172235283}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"brookmont-bath-2"},"timestamp":1777172235284}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-1"},"timestamp":1777172235285}
+{"sessionId":"f5fbdf","runId":"repro-2","hypothesisId":"H2","location":"lib/project-types.ts:24","message":"projectRowKey called","data":{"id":"chimney-outdoor-2"},"timestamp":1777172235285}
