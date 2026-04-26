@@ -44,18 +44,25 @@ const credibilityItems = [
 export default function HomeownersPage() {
   return (
     <>
-      <PageIntro title="Homeowners" titleClassName="text-4xl sm:text-5xl">
+      <PageIntro
+        eyebrow="Who the pros use"
+        eyebrowClassName="text-5xl font-bold italic tracking-tight text-craftmark-navy sm:text-6xl"
+        title="Homeowners"
+        titleClassName="text-4xl sm:text-5xl"
+        bodyClassName="mt-6 max-w-6xl text-xl leading-relaxed text-craftmark-muted sm:text-2xl"
+      >
         <p className="text-xl font-semibold tracking-tight text-craftmark-text sm:text-2xl">
-          Professional results for real homes.
+          The standards professionals trust-now for homeowners
         </p>
         <p className="mt-6">
-          At Craftmark, we bring the same fabrication standards and disciplined process trusted by
-          professionals into your home renovation. That means better planning, cleaner installs, and
-          results that hold up long after the project is complete. Whether you are updating a single
-          space or completing a full home refresh, our team delivers pro-grade craftsmanship with
-          clear communication and fewer surprises—from first measurement to final handoff.
-          Professional process. Professional results. Because when the work behind the scenes is done
-          right, everything you see - and do not see - lasts.
+          Craftmark is who the pros use-and now, we&apos;re open to homeowners. We bring the same
+          fabrication standards, disciplined process, and professional-grade execution trusted by
+          builders and contractors into your home renovation. That means better planning, cleaner
+          installs, and results that hold up long after the project is complete. Whether you&apos;re
+          updating a single space or tackling a full home refresh, our team delivers pro-level
+          craftsmanship with clear communication and fewer surprises-from first measurement to final
+          handoff. Professional process. Professional results. Because when the work behind the scenes
+          is done right, everything you see-and don&apos;t see-lasts.
         </p>
       </PageIntro>
       <PageBannerImage

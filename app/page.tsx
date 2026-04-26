@@ -1,4 +1,5 @@
 import { FaqList } from "@/components/FaqList";
+import { HomepageLaunchPopup } from "@/components/HomepageLaunchPopup";
 import { JsonLd } from "@/components/JsonLd";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { WhyChooseCraftmark } from "@/components/WhyChooseCraftmark";
@@ -14,6 +15,7 @@ const projects = projectsRaw as ProjectEntry[];
 export default function HomePage() {
   return (
     <>
+      <HomepageLaunchPopup />
       <JsonLd data={faqPageJsonLd()} />
       <section className="border-b border-craftmark-line bg-craftmark-surface">
         <div className="relative isolate overflow-hidden">

@@ -184,7 +184,7 @@ export default function SinksAndEdgesPage() {
               Blanco sinks
             </a>
             <a
-              href="https://mazisinks.com/"
+              href="https://www.mazi-sinks.com/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex rounded-md border border-craftmark-line bg-white px-4 py-2 text-sm font-semibold text-craftmark-navy hover:bg-craftmark-surface"
