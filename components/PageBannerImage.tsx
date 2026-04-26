@@ -9,6 +9,8 @@ type PageBannerImageProps = {
   subtitleClassName?: string;
   /** Overrides spacing/alignment wrapper around title/subtitle below the image. */
   contentClassName?: string;
+  /** Optional class overrides for the image frame wrapper. */
+  imageShellClassName?: string;
   height?: "compact" | "default" | "tall" | "hero";
   variant?: "imageFirst" | "imageFirstMuted";
   textAlign?: "left" | "center" | "right";
@@ -34,6 +36,7 @@ export function PageBannerImage({
   titleClassName,
   subtitleClassName,
   contentClassName,
+  imageShellClassName,
   height = "default",
   variant = "imageFirst",
   textAlign = "left",
@@ -70,7 +73,7 @@ export function PageBannerImage({
   return (
     <section className="border-y border-craftmark-line bg-craftmark-surface">
       <div className={`mx-auto py-10 sm:py-12 ${containerClassName ?? layoutClass}`}>
-        <div className={`relative overflow-hidden ${imageShellClass} ${heightClass[height]}`}>
+        <div className={`relative overflow-hidden ${imageShellClass} ${heightClass[height]} ${imageShellClassName ?? ""}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={imageSrc}
