@@ -34,7 +34,7 @@ export default function HomePage() {
               className="h-full w-full scale-110 object-cover opacity-40 blur-[2px]"
             />
           </div>
-          <div className="relative mx-auto max-w-[100rem] px-4 py-20 sm:px-6 sm:py-24">
+          <div className="relative mx-auto max-w-[86rem] px-6 py-20 sm:px-8 sm:py-24">
             <div className="max-w-3xl rounded-xl bg-white/75 p-6 shadow-sm backdrop-blur-sm sm:p-8">
               <h1 className="text-4xl font-semibold tracking-tight text-craftmark-text sm:text-5xl">
                 Professional countertops and solid surfaces for every scope.
@@ -73,7 +73,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-craftmark-line bg-craftmark-surface">
-        <div className="mx-auto max-w-[100rem] px-4 py-8 sm:px-6 sm:py-10">
+        <div className="mx-auto max-w-[86rem] px-6 py-8 sm:px-8 sm:py-10">
           <div className="overflow-hidden rounded-2xl border border-craftmark-line">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -90,7 +90,7 @@ export default function HomePage() {
 
       <WhyChooseCraftmark />
 
-      <section className="mx-auto max-w-[100rem] px-4 py-16 sm:px-6">
+      <section className="mx-auto max-w-[86rem] px-6 py-16 sm:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div className="rounded-lg border border-craftmark-line bg-white p-6">
             <h2 className="text-lg font-semibold text-craftmark-navy">Homeowners</h2>
@@ -123,7 +123,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-t border-craftmark-line bg-craftmark-surface">
-        <div className="mx-auto max-w-[100rem] px-4 py-16 sm:px-6">
+        <div className="mx-auto max-w-[86rem] px-6 py-16 sm:px-8">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
               <h2 className="text-2xl font-semibold text-craftmark-text">Recent completed projects</h2>
@@ -145,7 +145,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-t border-craftmark-line bg-white">
-        <div className="mx-auto max-w-[100rem] px-4 py-16 sm:px-6">
+        <div className="mx-auto max-w-[86rem] px-6 py-16 sm:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-2xl font-semibold text-craftmark-text">Questions we hear often</h2>
             <p className="mt-2 text-craftmark-muted">

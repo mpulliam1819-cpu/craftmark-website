@@ -41,7 +41,7 @@ const localBusiness = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen font-sans">
+      <body className="min-h-screen overflow-x-hidden font-sans">
         <JsonLd data={localBusiness} />
         <Header />
         <main>{children}</main>

@@ -27,7 +27,6 @@ const nav: NavItem[] = [
     ],
   },
   { href: "/projects", label: "Projects" },
-  { href: "/resources", label: "Resources" },
   {
     href: "/about-us",
     label: "About",
@@ -37,6 +36,7 @@ const nav: NavItem[] = [
       { href: "/about-us", label: "About Us" },
       { href: "/associations", label: "Associations" },
       { href: "/faq", label: "FAQ" },
+      { href: "/resources", label: "Resources" },
     ],
   },
   { href: "/contact", label: "Contact" },
@@ -88,19 +88,16 @@ export function Header() {
   return (
     <header ref={headerRef} className="relative bg-transparent">
       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3 border-x border-t border-craftmark-line bg-white px-4 py-4 sm:flex-nowrap sm:items-end sm:gap-6 sm:px-6 sm:py-5 lg:gap-8 lg:px-10 lg:py-6">
-        <div className="min-w-0 shrink-0 sm:min-w-[14rem]">
+        <div className="min-w-0 shrink-0 sm:mr-4 sm:min-w-[14rem] lg:mr-6">
           <Link href="/" className="inline-flex items-center text-lg font-semibold text-craftmark-navy">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={SITE.logoPath} alt={SITE.name} className="h-[4.5rem] w-auto sm:h-[5rem] lg:h-[5.5rem]" />
+            <img src={SITE.logoPath} alt={SITE.name} className="h-[3.9rem] w-auto sm:h-[4.3rem] lg:h-[4.7rem]" />
           </Link>
         </div>
         <div className="min-w-0 flex-1 sm:pb-1">
           <div className="hidden sm:block">
-            <nav
-              className="flex w-full min-w-0 pr-40 sm:pr-48 lg:pr-60"
-              aria-label="Primary"
-            >
-              <ul className="flex w-full min-w-0 items-center justify-between gap-0.5 whitespace-nowrap px-0 text-xl font-semibold leading-snug text-craftmark-text sm:gap-1 sm:text-2xl lg:gap-1.5 lg:px-1 lg:text-[2rem]">
+            <nav className="flex w-full min-w-0" aria-label="Primary">
+              <ul className="flex w-full min-w-0 items-center justify-between gap-0 whitespace-nowrap px-0 text-[clamp(1.26rem,1.74vw,2.45rem)] font-semibold leading-[1.06] tracking-[0.01em] text-craftmark-text lg:gap-0 xl:gap-0.25">
                 {nav.map((item) => (
                   <li
                     key={item.href}
@@ -114,13 +111,13 @@ export function Header() {
                       <div className="inline-flex items-center">
                         <Link
                           href={item.href}
-                          className="block rounded-md px-2 py-3 transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy lg:px-4"
+                          className="block rounded-md px-0.5 py-3 transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy lg:px-2"
                         >
                           {item.label}
                         </Link>
                         <button
                           type="button"
-                          className="rounded-md px-1.5 py-3 text-sm text-craftmark-muted transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy lg:px-2"
+                          className="rounded-md px-0 py-3 text-[0.8em] text-craftmark-muted transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy lg:px-0.5"
                           aria-label={`Toggle ${item.label} menu`}
                           onClick={() =>
                             setOpenDesktopMenu((prev) => (prev === item.label ? null : item.label))
@@ -132,7 +129,7 @@ export function Header() {
                     ) : (
                       <Link
                         href={item.href}
-                        className="block rounded-md px-2 py-3 transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy lg:px-4"
+                        className="block rounded-md px-0.5 py-3 transition-colors hover:bg-craftmark-surface hover:text-craftmark-navy lg:px-2"
                       >
                         {item.label}
                       </Link>
@@ -228,7 +225,7 @@ export function Header() {
           </div>
         </div>
       </div>
-      <div className="pointer-events-none absolute right-4 top-full z-20 hidden -translate-y-px sm:block sm:right-6 lg:right-10">
+      <div className="pointer-events-none absolute right-4 top-full z-20 hidden -translate-y-px xl:block xl:right-10">
         <div className="pointer-events-auto inline-flex items-center gap-3 rounded-b-lg border border-craftmark-line border-t-0 bg-white px-5 py-3.5 shadow-sm">
           <Link
             href="/book-consult"

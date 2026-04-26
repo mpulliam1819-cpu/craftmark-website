@@ -1,4 +1,6 @@
 import { PageIntro } from "@/components/PageIntro";
+import { SinksCatalog } from "@/components/SinksCatalog";
+import { sinksCatalog } from "@/data/sinks";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -7,21 +9,6 @@ export const metadata: Metadata = {
   description:
     "Sink coordination and edge profile options for Craftmark countertops—selection guidance, shop standards, and what to confirm before fabrication.",
 };
-
-const sinkNotes = [
-  {
-    title: "Undermount & reveal",
-    body: "Typical undermount installs with consistent reveal and clip coordination—aligned to your sink bowl and cabinet layout.",
-  },
-  {
-    title: "Top-mount & apron fronts",
-    body: "Where design calls for visible rim or farmhouse-style fronts, we template to the actual sink and adjust cutouts for a clean field fit.",
-  },
-  {
-    title: "Bowls on site",
-    body: "Have the physical sink (or verified shop drawing) available for measure when the schedule is tight—reduces rework and protects install day.",
-  },
-] as const;
 
 const edgeProfiles = [
   { name: "Straight", tier: "Standard", shape: "straight" },
@@ -164,14 +151,7 @@ export default function SinksAndEdgesPage() {
               MAZI sinks
             </a>
           </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {sinkNotes.map((item) => (
-              <article key={item.title} className="rounded-lg border border-craftmark-line bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-craftmark-navy">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-craftmark-muted">{item.body}</p>
-              </article>
-            ))}
-          </div>
+          <SinksCatalog sinks={sinksCatalog} />
         </div>
       </section>
 
