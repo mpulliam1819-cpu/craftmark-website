@@ -41,7 +41,7 @@ export default function ProductsMaterialsPage() {
       </PageIntro>
 
       <section className="border-t border-craftmark-line bg-craftmark-surface">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
           <div className="grid gap-6 md:grid-cols-3">
             {materialCards.map((card) => (
               <article
@@ -57,7 +57,7 @@ export default function ProductsMaterialsPage() {
       </section>
 
       <section className="border-t border-craftmark-line bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
           <h2 className="text-2xl font-semibold text-craftmark-text">What to consider before you choose</h2>
           <ul className="mt-6 list-disc space-y-2 pl-5 text-craftmark-muted">
             {selectionFactors.map((item) => (
@@ -68,7 +68,7 @@ export default function ProductsMaterialsPage() {
       </section>
 
       <section className="border-t border-craftmark-line bg-craftmark-surface">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="mx-auto max-w-[80rem] px-4 py-12 sm:px-6">
           <p className="text-sm text-craftmark-muted">
             <Link href="/products" className="font-semibold text-craftmark-navy hover:text-craftmark-navyLight">
               Back to Products
@@ -87,3 +87,4 @@ export default function ProductsMaterialsPage() {
     </>
   );
 }
+

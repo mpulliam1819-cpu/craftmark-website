@@ -16,7 +16,7 @@ export default function ContactPage() {
         Share the basics and we will route your inquiry appropriately. For commercial projects, use
         the commercial path so we can respond with the right questions up front.
       </PageIntro>
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-12 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="text-sm text-craftmark-muted">
             <div className="overflow-hidden rounded-lg border border-craftmark-line">
@@ -53,3 +53,4 @@ export default function ContactPage() {
     </>
   );
 }
+

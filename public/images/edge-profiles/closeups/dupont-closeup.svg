@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#dde1e7"/>
+  <rect x="90" y="220" width="1020" height="340" rx="20" fill="#f8f9fb"/>
+  <path d="M120 500V270h660v80h70q140 0 180 120v30H120z" fill="#c1c7cf"/>
+  <text x="120" y="710" fill="#2b3b50" font-size="40" font-family="Arial, sans-serif">Dupont Close-Up Placeholder</text>
+</svg>

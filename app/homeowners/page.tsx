@@ -1,4 +1,5 @@
 import { AudienceCtas } from "@/components/AudienceCtas";
+import { HomeownersHeroVideo } from "@/components/HomeownersHeroVideo";
 import { PageIntro } from "@/components/PageIntro";
 import { PageBannerImage } from "@/components/PageBannerImage";
 import { ProjectImageStrip } from "@/components/ProjectImageStrip";
@@ -13,6 +14,34 @@ export const metadata: Metadata = {
 };
 
 const projects = projectsRaw as ProjectEntry[];
+const homeownerProjectCards = projects.map((project) => {
+  if (project.id === "brookmont-kitchen-1") {
+    return {
+      ...project,
+      projectName: "Edgewood Kitchen",
+      caption: "Inset cabinetry with warm neutrals, crisp seams, and a clean Birch RiverRock finish.",
+      image: "/images/swatches/homeowners-edgewood-riverrock.webp",
+    };
+  }
+  if (project.id === "brookmont-kitchen-2") {
+    return {
+      ...project,
+      projectName: "Signature Marble Kitchen",
+      caption: "Bold veining and deep cabinet contrast create a dramatic, high-end focal kitchen.",
+      image: "/images/projects/homeowners-adobestock-199345418.jpeg",
+    };
+  }
+  if (project.id === "brookmont-bath-1") {
+    return {
+      ...project,
+      category: "Kitchen",
+      projectName: "Risegate Kitchen",
+      caption: "Soft, light kitchen palette with subtle movement and polished details throughout.",
+      image: "/images/swatches/homeowners-risegate-cambria.jpg",
+    };
+  }
+  return project;
+});
 const credibilityItems = [
   {
     icon: "✓",
@@ -49,7 +78,13 @@ const credibilityItems = [
 export default function HomeownersPage() {
   return (
     <>
+      <section className="border-b border-craftmark-line bg-craftmark-surface lg:pt-16">
+        <div className="mx-auto max-w-[80rem] px-4 py-8 sm:px-6 sm:py-10">
+          <HomeownersHeroVideo />
+        </div>
+      </section>
       <PageIntro
+        sectionClassName="bg-white"
         eyebrow="Who the Pros Use."
         eyebrowClassName="text-5xl font-bold italic tracking-tight text-craftmark-navy sm:text-6xl"
         title="Homeowners"
@@ -77,10 +112,10 @@ export default function HomeownersPage() {
           title="Kitchen and bath results you can picture in your home"
           subtitle="Craftmark surfaces are fabricated with advanced equipment and installed by experienced crews who do this work every day. The result is a clean handoff, precise fit, and a finish that looks right - and stays right."
           contentClassName="mt-10 sm:mt-12"
-          containerClassName="max-w-7xl px-4 sm:px-6"
+          containerClassName="max-w-[80rem] px-5 sm:px-6 lg:px-8"
           titleClassName="max-w-6xl text-3xl font-semibold tracking-tight text-craftmark-text sm:text-4xl"
           subtitleClassName="max-w-6xl text-xl leading-relaxed text-craftmark-muted sm:text-2xl"
-          imageShellClassName="mx-auto max-w-6xl lg:h-[34rem]"
+          imageShellClassName="mx-auto max-w-[80rem]"
           height="tall"
           variant="imageFirst"
           textAlign="left"
@@ -90,7 +125,7 @@ export default function HomeownersPage() {
         />
       </div>
       <section className="border-t border-craftmark-line bg-craftmark-surface">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+        <div className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
           <h2 className="text-2xl font-semibold tracking-tight text-craftmark-text sm:text-3xl">
             Why professionals choose Craftmark - and why that matters for your home
           </h2>
@@ -125,7 +160,7 @@ export default function HomeownersPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-xl font-semibold text-craftmark-navy">Professional standards that show up at home</h2>
@@ -147,14 +182,16 @@ export default function HomeownersPage() {
         </div>
       </section>
       <ProjectImageStrip
-        projects={projects}
+        projects={homeownerProjectCards}
         title="Homeowner project snapshots"
-        subtitle="Recent kitchen and bath installs completed by Craftmark teams."
-        category="Kitchen"
+        subtitle="Find inspiration for your dream kitchen or bath project."
+        highlightIds={["brookmont-kitchen-1", "brookmont-kitchen-2", "brookmont-bath-1"]}
         count={3}
         offset={0}
-        containerClassName="max-w-7xl px-4 sm:px-6 lg:px-6"
+        containerClassName="max-w-7xl px-5 sm:px-6 lg:px-6"
       />
     </>
   );
 }
+
+

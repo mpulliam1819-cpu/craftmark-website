@@ -29,7 +29,7 @@ export default function AssociationsPage() {
         Craftmark values industry alignment and strong partnerships that improve quality outcomes for
         homeowners, builders, and commercial teams.
       </PageIntro>
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
         <div className="grid gap-8 md:grid-cols-3">
           {associations.map((association) => (
             <article
@@ -45,3 +45,4 @@ export default function AssociationsPage() {
     </>
   );
 }
+

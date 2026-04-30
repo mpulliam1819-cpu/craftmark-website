@@ -27,7 +27,7 @@ export function RemnantsBoard({ items }: { items: RemnantEntry[] }) {
   }, [items, material, thickness, color, minSize]);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-[80rem] px-4 py-10 sm:px-6">
       <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-950">
         Remnant availability changes quickly. Submit a request and our team will confirm what is
         available for your job.
@@ -133,3 +133,4 @@ function FilterSelect({
     </div>
   );
 }
+

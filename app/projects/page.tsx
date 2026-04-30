@@ -33,9 +33,10 @@ export default function ProjectsPage() {
         frame="rounded"
         layout="wide"
       />
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
         <ProjectGallery projects={projects} showFilters />
       </section>
     </>
   );
 }
+

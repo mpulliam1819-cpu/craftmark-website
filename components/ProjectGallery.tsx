@@ -169,7 +169,7 @@ export function ProjectGallery({
             onClick={() => setActiveIndex(index)}
             className="flex h-full flex-col rounded-lg border border-craftmark-line bg-white text-left shadow-sm transition hover:border-craftmark-navyLight"
           >
-            <div className="relative aspect-[5/4] w-full overflow-hidden rounded-t-lg bg-craftmark-surface">
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-t-lg bg-craftmark-surface">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={p.image}
@@ -373,3 +373,4 @@ export function ProjectGallery({
     </div>
   );
 }
+

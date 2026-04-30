@@ -28,7 +28,7 @@ export default function ProductsCloseoutsPage() {
       </PageIntro>
 
       <section className="border-t border-craftmark-line bg-craftmark-surface">
-        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+        <div className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
           <div className="grid gap-8 md:grid-cols-2">
             <article className="rounded-lg border border-craftmark-line bg-white p-6 shadow-sm">
               <h2 className="text-xl font-semibold text-craftmark-navy">Color selector closeouts</h2>
@@ -93,3 +93,4 @@ export default function ProductsCloseoutsPage() {
     </>
   );
 }
+

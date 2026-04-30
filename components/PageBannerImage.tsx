@@ -19,13 +19,15 @@ type PageBannerImageProps = {
   layout?: "contained" | "wide" | "splitLeft" | "splitRight" | "fullBleed";
   /** Optional override for outer content width + horizontal padding wrapper. */
   containerClassName?: string;
+  /** Optional override for section background class. */
+  sectionClassName?: string;
 };
 
-const heightClass: Record<NonNullable<PageBannerImageProps["height"]>, string> = {
-  compact: "h-56 sm:h-72",
-  default: "h-72 sm:h-96",
-  tall: "h-80 sm:h-[30rem]",
-  hero: "h-[22rem] sm:h-[30rem] lg:h-[38rem]",
+const aspectClass: Record<NonNullable<PageBannerImageProps["height"]>, string> = {
+  compact: "aspect-video",
+  default: "aspect-[3/2]",
+  tall: "aspect-[3/2]",
+  hero: "aspect-video",
 };
 
 export function PageBannerImage({
@@ -44,6 +46,7 @@ export function PageBannerImage({
   frame = "rounded",
   layout = "contained",
   containerClassName,
+  sectionClassName,
 }: PageBannerImageProps) {
   const alignClass = textAlign === "center" ? "text-center" : textAlign === "right" ? "text-right" : "text-left";
   const frameClass =
@@ -52,12 +55,12 @@ export function PageBannerImage({
     layout === "fullBleed"
       ? "max-w-none px-0"
       : layout === "wide"
-        ? "max-w-[88rem] px-4 sm:px-6 lg:px-8"
+        ? "max-w-[80rem] px-5 sm:px-6 lg:px-8"
         : layout === "splitLeft"
-          ? "max-w-[88rem] px-4 sm:px-6 lg:pr-28 lg:px-8"
+          ? "max-w-[80rem] px-5 sm:px-6 lg:pr-28 lg:px-8"
           : layout === "splitRight"
-            ? "max-w-[88rem] px-4 sm:px-6 lg:pl-28 lg:px-8"
-            : "max-w-[88rem] px-4 sm:px-6 lg:px-8";
+            ? "max-w-[80rem] px-5 sm:px-6 lg:pl-28 lg:px-8"
+            : "max-w-[80rem] px-5 sm:px-6 lg:px-8";
   const imageShellClass = layout === "fullBleed" ? "border-y border-craftmark-line" : `border border-craftmark-line ${frameClass}`;
   const copyToneClass =
     variant === "imageFirstMuted" ? "text-craftmark-muted" : "text-craftmark-text";
@@ -71,14 +74,16 @@ export function PageBannerImage({
   const titleClass = titleClassName ?? defaultTitleClass;
 
   return (
-    <section className="border-y border-craftmark-line bg-craftmark-surface">
+    <section className={`border-y border-craftmark-line ${sectionClassName ?? "bg-craftmark-surface"}`}>
       <div className={`mx-auto py-10 sm:py-12 ${containerClassName ?? layoutClass}`}>
-        <div className={`relative overflow-hidden ${imageShellClass} ${heightClass[height]} ${imageShellClassName ?? ""}`}>
+        <div
+          className={`relative overflow-hidden ${imageShellClass} ${aspectClass[height]} ${imageShellClassName ?? ""}`}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={imageSrc}
             alt={imageAlt}
-            className="h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
             style={{ objectPosition: imagePosition }}
           />
         </div>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#dfe3e8"/>
+  <rect x="90" y="220" width="1020" height="340" rx="20" fill="#f8f9fa"/>
+  <path d="M120 500V270h700v60h90v40h90v130H120z" fill="#c1c8cf"/>
+  <text x="120" y="710" fill="#2b3b50" font-size="40" font-family="Arial, sans-serif">Waterfall Close-Up Placeholder</text>
+</svg>

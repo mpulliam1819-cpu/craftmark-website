@@ -18,7 +18,7 @@ export default function ProductsPartnersPage() {
         homeowners, a builder running production or custom work, or a fabricator needing overflow
         capacity, we align our shop and field teams to your workflow.
       </PageIntro>
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
         <div className="grid gap-8 md:grid-cols-3">
           {[
             {
@@ -64,3 +64,4 @@ export default function ProductsPartnersPage() {
     </>
   );
 }
+

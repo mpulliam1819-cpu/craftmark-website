@@ -21,7 +21,7 @@ export default function QuoteRequestPage() {
         Tell us about your scope and timing. We will respond with next steps and what we need to
         move forward—without publishing pricing online. Craftmark works on projects of any size.
       </PageIntro>
-      <section className="mx-auto max-w-[100rem] px-4 py-12 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-12 sm:px-6">
         <Suspense fallback={<p className="text-sm text-craftmark-muted">Loading form…</p>}>
           <QuoteRequestForm />
         </Suspense>
@@ -36,3 +36,4 @@ export default function QuoteRequestPage() {
     </>
   );
 }
+

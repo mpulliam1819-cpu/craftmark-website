@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#dce1e7"/>
+  <rect x="90" y="220" width="1020" height="340" rx="20" fill="#f9fafb"/>
+  <path d="M120 500V270h640a200 200 0 0 1 0 230H120z" fill="#bec6ce"/>
+  <text x="120" y="710" fill="#2b3b50" font-size="40" font-family="Arial, sans-serif">Full Bullnose Close-Up Placeholder</text>
+</svg>

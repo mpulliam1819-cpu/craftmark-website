@@ -6,6 +6,7 @@ export function PageIntro({
   title,
   titleClassName,
   bodyClassName,
+  sectionClassName,
   children,
 }: {
   eyebrow?: string;
@@ -16,14 +17,18 @@ export function PageIntro({
   titleClassName?: string;
   /** Optional class overrides for the intro body wrapper width/spacing. */
   bodyClassName?: string;
+  /** Optional background (and related) utilities for the outer section; defaults to surface gray. */
+  sectionClassName?: string;
   children?: ReactNode;
 }) {
   const titleSizes = titleClassName ?? "text-4xl sm:text-5xl";
   const bodyClasses = bodyClassName ?? "mt-6 max-w-4xl text-xl leading-relaxed text-craftmark-muted sm:text-2xl";
   const eyebrowClasses = eyebrowClassName ?? "text-base font-semibold uppercase italic tracking-wide text-craftmark-navy";
   return (
-    <section className="border-b-2 border-craftmark-line bg-craftmark-surface">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
+    <section
+      className={`border-b-2 border-craftmark-line ${sectionClassName ?? "bg-craftmark-surface"}`}
+    >
+      <div className="mx-auto max-w-[80rem] px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
         {eyebrow ? (
           <p className={eyebrowClasses}>
             {eyebrow}
@@ -39,3 +44,4 @@ export function PageIntro({
     </section>
   );
 }
+

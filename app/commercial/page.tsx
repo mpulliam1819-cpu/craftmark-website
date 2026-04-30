@@ -43,17 +43,17 @@ export default function CommercialPage() {
         subtitle="From regional builds to multi-site programs, our fabrication and logistics are designed for scale—delivering consistent quality, predictable throughput, and disciplined coordination from start to finish. The result is a partner that helps reduce complexity and support long-term operational success."
         contentClassName="mt-10 sm:mt-12"
         subtitleClassName="mt-5 max-w-6xl text-xl leading-relaxed text-craftmark-muted sm:text-2xl"
-        imageShellClassName="mx-auto max-w-6xl lg:h-[34rem]"
+        imageShellClassName="mx-auto max-w-[80rem] lg:h-[34rem]"
           variant="imageFirstMuted"
           textAlign="left"
           imagePosition="center center"
           frame="soft"
           layout="contained"
         height="tall"
-          containerClassName="max-w-7xl px-4 sm:px-6"
+          containerClassName="max-w-7xl px-5 sm:px-6"
         />
       </div>
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-xl font-semibold text-craftmark-navy">
@@ -92,8 +92,9 @@ export default function CommercialPage() {
         subtitle="Multifamily turnover, coordinated commercial programs, and installs built for throughput—not one-off showcase work."
         highlightIds={["chestnut-multifamily-1", "camelot-commercial-2", "chestnut-multifamily-2"]}
         count={3}
-        containerClassName="max-w-7xl px-4 sm:px-6 lg:px-6"
+        containerClassName="max-w-7xl px-5 sm:px-6 lg:px-6"
       />
     </>
   );
 }
+

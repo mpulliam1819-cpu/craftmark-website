@@ -4,7 +4,7 @@ import { SITE, directionsUrl, fullAddress } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="border-t border-craftmark-line bg-craftmark-surface">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
+      <div className="mx-auto max-w-[80rem] px-4 py-12 sm:px-6">
         <div className="grid gap-12 md:grid-cols-3 md:items-start md:gap-8">
           <div className="flex flex-col items-center gap-3 text-center">
             <div className="inline-flex justify-center">
@@ -64,3 +64,4 @@ export function Footer() {
     </footer>
   );
 }
+

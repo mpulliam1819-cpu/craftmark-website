@@ -50,7 +50,7 @@ export default function ResourcesPage() {
         customers after install. PDFs and updates are added as they are finalized—if you need
         something you do not see here, ask your Craftmark contact.
       </PageIntro>
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {resourceGroups.map((group) => (
             <article
@@ -80,3 +80,4 @@ export default function ResourcesPage() {
     </>
   );
 }
+

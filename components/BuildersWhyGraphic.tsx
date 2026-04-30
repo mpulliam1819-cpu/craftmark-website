@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from "react";
+import { Fragment, type ReactElement, type ReactNode } from "react";
 
 type IconProps = { className?: string };
 
@@ -114,7 +114,7 @@ export function BuildersWhyGraphic() {
       className="border-b-2 border-craftmark-line bg-craftmark-surface"
       aria-labelledby="builders-why-graphic-heading"
     >
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14">
+      <div className="mx-auto max-w-[80rem] px-5 py-12 sm:px-6 sm:py-14">
         <div className="text-center">
           <h2
             id="builders-why-graphic-heading"
@@ -128,7 +128,7 @@ export function BuildersWhyGraphic() {
         </div>
 
         <div
-          className="mx-auto mt-8 flex max-w-5xl items-center justify-center gap-4 text-base font-semibold uppercase tracking-wide text-craftmark-muted sm:mt-10 sm:gap-5 sm:text-lg lg:text-xl"
+          className="mx-auto mt-8 hidden max-w-5xl items-center justify-center gap-4 text-base font-semibold uppercase tracking-wide text-craftmark-muted sm:mt-10 sm:gap-5 sm:text-lg lg:flex lg:text-xl"
           aria-hidden
         >
           <span>1979</span>
@@ -139,21 +139,36 @@ export function BuildersWhyGraphic() {
         </div>
 
         <ol className="mt-10 grid list-none grid-cols-1 gap-5 sm:grid-cols-2 lg:mt-12 lg:grid-cols-5 lg:gap-4">
-          {steps.map(({ title, caption, Icon }) => (
-            <li
-              key={title}
-              className="flex flex-col rounded-lg border border-craftmark-line bg-white p-5 shadow-sm sm:p-6"
-            >
-              <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-craftmark-surface text-craftmark-navy">
-                <Icon className="h-7 w-7" />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold leading-snug text-craftmark-text sm:text-xl">
-                {title}
-              </h3>
-              <p className="mt-3 flex-1 text-base leading-relaxed text-craftmark-muted sm:text-[1.05rem]">
-                {caption}
-              </p>
-            </li>
+          {steps.map(({ title, caption, Icon }, index) => (
+            <Fragment key={title}>
+              {index === 0 ? (
+                <li className="text-lg font-semibold uppercase tracking-wide text-craftmark-muted lg:hidden">
+                  1979
+                </li>
+              ) : null}
+              <li className="flex flex-col rounded-lg border border-craftmark-line bg-white p-5 shadow-sm sm:p-6">
+                <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-craftmark-surface text-craftmark-navy">
+                  <Icon className="h-7 w-7" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold leading-snug text-craftmark-text sm:text-xl">
+                  {title}
+                </h3>
+                <p className="mt-3 flex-1 text-base leading-relaxed text-craftmark-muted sm:text-[1.05rem]">
+                  {caption}
+                </p>
+              </li>
+              {index === 1 ? (
+                <li className="flex items-center gap-3 text-lg font-semibold uppercase tracking-wide text-craftmark-navy lg:hidden">
+                  <span className="h-8 w-0.5 bg-craftmark-line" aria-hidden />
+                  <span>Supply chain</span>
+                </li>
+              ) : null}
+              {index === steps.length - 1 ? (
+                <li className="text-lg font-semibold uppercase tracking-wide text-craftmark-muted lg:hidden">
+                  Today
+                </li>
+              ) : null}
+            </Fragment>
           ))}
         </ol>
 
@@ -164,3 +179,4 @@ export function BuildersWhyGraphic() {
     </section>
   );
 }
+

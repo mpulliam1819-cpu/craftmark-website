@@ -15,7 +15,7 @@ export default function RemnantRequestPage() {
         Tell us what you are looking for. Availability changes quickly; submissions help our team
         match you with what is in the yard today.
       </PageIntro>
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-12 sm:px-6">
         <Suspense fallback={<p className="text-sm text-craftmark-muted">Loading form…</p>}>
           <RemnantRequestForm />
         </Suspense>
@@ -23,3 +23,4 @@ export default function RemnantRequestPage() {
     </>
   );
 }
+

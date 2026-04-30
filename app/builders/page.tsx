@@ -55,18 +55,19 @@ export default function BuildersPage() {
           contentClassName="mt-10 sm:mt-12"
           titleClassName="max-w-6xl text-3xl font-semibold tracking-tight text-craftmark-text sm:text-4xl"
           subtitleClassName="max-w-6xl text-xl leading-relaxed text-craftmark-muted sm:text-2xl"
-          imageShellClassName="mx-auto max-w-6xl lg:h-[34rem]"
+          imageShellClassName="mx-auto max-w-[80rem]"
           variant="imageFirstMuted"
           textAlign="left"
           imagePosition="center center"
           frame="pill"
           layout="contained"
           height="tall"
-          containerClassName="max-w-7xl px-4 sm:px-6"
+          containerClassName="max-w-[80rem] px-5 sm:px-6 lg:px-8"
+          sectionClassName="bg-white"
         />
       </div>
       <BuildersWhyGraphic />
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight text-craftmark-navy sm:text-3xl">
@@ -102,8 +103,11 @@ export default function BuildersPage() {
         subtitle="Kitchen and bath installs from production runs to multifamily turnover—consistent execution, coordinated field work."
         highlightIds={["brookmont-kitchen-1", "chestnut-multifamily-1", "oxford-custom-2"]}
         count={3}
-        containerClassName="max-w-7xl px-4 sm:px-6 lg:px-6"
+        containerClassName="max-w-7xl px-5 sm:px-6 lg:px-6"
       />
     </>
   );
 }
+
+
+

@@ -82,7 +82,7 @@ export function ColorExplorer({ colors }: { colors: ColorEntry[] }) {
   const activeImageSrc = activeImages[activeImageIndex] ?? active?.image ?? "";
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-[80rem] px-4 py-10 sm:px-6">
       <div className="grid gap-4 rounded-lg border border-craftmark-line bg-white p-4 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <label className="text-xs font-semibold uppercase text-craftmark-muted">Material</label>
@@ -285,3 +285,4 @@ export function ColorExplorer({ colors }: { colors: ColorEntry[] }) {
     </div>
   );
 }
+

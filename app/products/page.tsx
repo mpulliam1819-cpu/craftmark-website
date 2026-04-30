@@ -33,7 +33,7 @@ export default function ProductsPage() {
         frame="rounded"
         layout="wide"
       />
-      <section className="mx-auto max-w-[100rem] px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
         <div className="grid gap-8 md:grid-cols-2">
           {[
             { title: "Quartz countertops", body: "Durable, low-maintenance options for busy kitchens." },
@@ -99,3 +99,4 @@ export default function ProductsPage() {
     </>
   );
 }
+

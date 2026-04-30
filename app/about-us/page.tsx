@@ -16,7 +16,7 @@ export default function AboutUsPage() {
         templating, fabrication, and installation. We focus on consistency, communication, and clean
         handoffs.
       </PageIntro>
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="text-xl font-semibold text-craftmark-navy">How we work</h2>
@@ -40,3 +40,4 @@ export default function AboutUsPage() {
     </>
   );
 }
+

@@ -16,7 +16,7 @@ const projects = projectsRaw as ProjectEntry[];
 export default function ShowroomPage() {
   return (
     <div className="bg-craftmark-surface">
-      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-8 sm:py-24">
+      <section className="mx-auto max-w-[80rem] px-4 py-16 sm:px-8 sm:py-24">
         <p className="text-xl font-semibold text-craftmark-navy">Craftmark</p>
         <h1 className="mt-6 text-4xl font-semibold leading-tight text-craftmark-text sm:text-5xl lg:text-6xl">
           Professional fabrication and installation at any scale.

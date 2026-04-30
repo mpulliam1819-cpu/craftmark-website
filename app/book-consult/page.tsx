@@ -22,7 +22,7 @@ export default function BookConsultPage() {
         Share a few details so we can prepare for a productive first conversation. Craftmark works on
         projects of any size.
       </PageIntro>
-      <section className="mx-auto max-w-[100rem] px-4 py-12 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-12 sm:px-6">
         <BookConsultForm />
       </section>
       <ProjectImageStrip
@@ -35,3 +35,4 @@ export default function BookConsultPage() {
     </>
   );
 }
+

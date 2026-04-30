@@ -63,7 +63,7 @@ export function ProjectImageStrip({
 
   return (
     <section className="border-t border-craftmark-line bg-craftmark-surface">
-      <div className={`mx-auto py-14 sm:py-16 ${containerClassName ?? "max-w-[100rem] px-4 sm:px-6 lg:px-8"}`}>
+      <div className={`mx-auto py-14 sm:py-16 ${containerClassName ?? "max-w-[80rem] px-5 sm:px-6 lg:px-8"}`}>
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight text-craftmark-text sm:text-4xl">{title}</h2>
@@ -85,7 +85,7 @@ export function ProjectImageStrip({
               onClick={() => setActiveIndex(index)}
               className="rounded-lg border border-craftmark-line bg-white p-3 text-left shadow-sm transition hover:border-craftmark-navyLight"
             >
-              <div className="aspect-[5/4] overflow-hidden rounded-md bg-craftmark-surface">
+              <div className="aspect-[3/2] overflow-hidden rounded-md bg-craftmark-surface">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={p.image}
@@ -145,3 +145,4 @@ export function ProjectImageStrip({
     </section>
   );
 }
+

@@ -30,7 +30,7 @@ export default function MeetTheTeamPage() {
         Craftmark teams are organized around planning, production quality, and dependable field
         execution—so outcomes stay predictable from start to finish.
       </PageIntro>
-      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <section className="mx-auto max-w-[80rem] px-4 py-14 sm:px-6">
         <div className="grid gap-8 md:grid-cols-3">
           {teamRoles.map((role) => (
             <article key={role.title} className="rounded-lg border border-craftmark-line bg-white p-6">
@@ -44,3 +44,4 @@ export default function MeetTheTeamPage() {
     </>
   );
 }
+

@@ -118,7 +118,7 @@ const cards: Array<{
 export function WhyChooseCraftmark() {
   return (
     <section className="border-t border-craftmark-line bg-craftmark-surface" aria-labelledby="why-choose-craftmark-heading">
-      <div className="mx-auto max-w-[86rem] px-6 py-14 sm:px-8 sm:py-16">
+      <div className="mx-auto max-w-[80rem] px-6 py-14 sm:px-8 sm:py-16">
         <h2 id="why-choose-craftmark-heading" className="text-2xl font-semibold tracking-tight text-craftmark-text sm:text-3xl">
           Why choose Craftmark
         </h2>
@@ -147,3 +147,4 @@ export function WhyChooseCraftmark() {
     </section>
   );
 }
+
